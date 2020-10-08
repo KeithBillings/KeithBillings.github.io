@@ -56,9 +56,9 @@ function App() {
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
             <Nav className="mr-auto">
-              <Nav.Link href="#aboutNavLink">About Me</Nav.Link>
-              <Nav.Link href="#codingPortfolioNavLink">Coding Portfolio</Nav.Link>
-              <Nav.Link href="#contactNavLink">Contact</Nav.Link>
+              <Nav.Link href="#about">About Me</Nav.Link>
+              <Nav.Link href="#codingPortfolio">Coding Portfolio</Nav.Link>
+              <Nav.Link href="#contact">Contact</Nav.Link>
             </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -77,7 +77,7 @@ function App() {
         </Col>
       </Row>
       <Row className="padding">
-        <Col id="aboutNavLink">
+        <Col id="about">
           <h2>
             About Me
           </h2><br></br>
@@ -89,7 +89,7 @@ function App() {
           </p>
         </Col>
       </Row>
-      <Row><Col id="codingPortfolioNavLink"><br></br></Col></Row>
+      <Row><Col id="codingPortfolio"><br></br></Col></Row>
       <Row className="padding">
         <Col>
           <h2>
