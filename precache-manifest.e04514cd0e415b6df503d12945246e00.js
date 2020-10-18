@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b430f667281bbca2e61e9bf4c33d8a50",
+    "revision": "5e5a582f4f0dfd8153b7a75560b6c49e",
     "url": "/index.html"
   },
   {
-    "revision": "562c18336ec3c8b547fe",
-    "url": "/static/css/2.50a5f423.chunk.css"
+    "revision": "700a950ce18187ef38c6",
+    "url": "/static/css/2.52b32611.chunk.css"
   },
   {
-    "revision": "747af4066ecabe256e35",
+    "revision": "5bdeddcc73323418c23b",
     "url": "/static/css/main.dd953492.chunk.css"
   },
   {
-    "revision": "562c18336ec3c8b547fe",
-    "url": "/static/js/2.556c8bf6.chunk.js"
+    "revision": "700a950ce18187ef38c6",
+    "url": "/static/js/2.7837cdda.chunk.js"
   },
   {
-    "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/static/js/2.556c8bf6.chunk.js.LICENSE.txt"
+    "revision": "8a137f586fcebb1a370343eb47b7677c",
+    "url": "/static/js/2.7837cdda.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "747af4066ecabe256e35",
-    "url": "/static/js/main.3b6d9a96.chunk.js"
+    "revision": "5bdeddcc73323418c23b",
+    "url": "/static/js/main.0145aa42.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -54,6 +54,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8786b533fb5ce26ee56e531ed1a96d19",
     "url": "/static/media/WeatherApp.8786b533.png"
+  },
+  {
+    "revision": "0024182d78b337ed232deeb44a25165d",
+    "url": "/static/media/advotecate.0024182d.png"
   },
   {
     "revision": "a9ae3f4c8ed8813d2c96ae40c25e1a37",
