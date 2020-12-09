@@ -21,47 +21,47 @@ AOS.init();
 
 function App() {
   return (
-    <Router>
-      <Container fluid>
-        {/* Nav Bar */}
-        <Row>
-          <Col>
-            <Navbar bg="dark" variant="dark" expand="md" fixed="top">
-              <Navbar.Brand href="/">KB</Navbar.Brand>
-              <Navbar.Toggle />
-              <Navbar.Collapse className="justify-content-end">
-                <Nav className="mr-auto">
-                  <Nav.Link href="/#about">About Me</Nav.Link>
-                  <Nav.Link href="/#codingPortfolio">Coding Portfolio</Nav.Link>
-                  <Nav.Link href="/#contact">Contact</Nav.Link>
-                  <Nav.Link href="/blog">Blog</Nav.Link>
-                </Nav>
-              </Navbar.Collapse>
-            </Navbar>
-          </Col>
-        </Row>
+    <Container fluid>
+      {/* Nav Bar */}
+      <Row>
+        <Col>
+          <Navbar bg="dark" variant="dark" expand="md" fixed="top">
+            <Navbar.Brand href="/">KB</Navbar.Brand>
+            <Navbar.Toggle />
+            <Navbar.Collapse className="justify-content-end">
+              <Nav className="mr-auto">
+                <Nav.Link href="/#about">About Me</Nav.Link>
+                <Nav.Link href="/#codingPortfolio">Coding Portfolio</Nav.Link>
+                <Nav.Link href="/#contact">Contact</Nav.Link>
+                <Nav.Link href="/blog">Blog</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </Col>
+      </Row>
+      <Router>
         <Switch>
-          <Route path="/Blog" component={Blog} />
-          <Route path="/" exact component={Home} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/blog" component={Blog} />
         </Switch>
+      </Router>
 
-        {/* Footer */}
-        <footer className="openSans">
-          <ul className="social">
-            <li className="whiteText">External Links:</li>
-            <li>
-              <a href="http://www.github.com/KeithBillings">My Github</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/KeithBillings/">LinkedIn</a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/cowboykeithbop/">Instagram</a>
-            </li>
-          </ul>
-        </footer>
-      </Container>
-    </Router>
+      {/* Footer */}
+      <footer className="openSans">
+        <ul className="social">
+          <li className="whiteText">External Links:</li>
+          <li>
+            <a href="http://www.github.com/KeithBillings">My Github</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/KeithBillings/">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/cowboykeithbop/">Instagram</a>
+          </li>
+        </ul>
+      </footer>
+    </Container>
   );
 }
 
