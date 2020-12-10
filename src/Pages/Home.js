@@ -160,8 +160,8 @@ function Home() {
           <br></br>
           <div className="openSans" data-aos="fade-up">
             <p>I am currently available for work</p>
-            <p>Email: keithbillingsbusiness@gmail.com</p>
-            <p>Phone Number: (503) 709-9897</p>
+            <p>Email: <a href="mailto:keithbillingsbusiness@gmail.com"> keithbillingsbusiness@gmail.com </a></p>
+            <p>Phone Number: <a href="tel:5037099897"> (503) 709-9897 </a></p>
             <a style={{ fontWeight: 600 }} href={`${keithResume}`} download>
               Download my resume (PDF)
             </a>
