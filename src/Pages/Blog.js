@@ -1,5 +1,4 @@
 import React from "react";
-// import { Route, BrowserRouter as Router } from "react-router-dom";
 
 // AOS
 import AOS from "aos";
@@ -22,7 +21,7 @@ function Blog() {
   return (
     <>
       {/* Header and splash */}
-      <Row id="blog" >
+      <Row id="blog">
         <Col>
           <Jumbotron
             style={{
@@ -51,7 +50,7 @@ function Blog() {
           padding: "0% 10% 0% 10%",
         }}
       >
-      <Row>
+        <Row>
           <Col>
             <BlogCard
               date={"December 9th, 2020"}
