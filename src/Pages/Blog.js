@@ -22,7 +22,7 @@ function Blog() {
   return (
     <>
       {/* Header and splash */}
-      <Row>
+      <Row id="blog" >
         <Col>
           <Jumbotron
             style={{
@@ -51,6 +51,23 @@ function Blog() {
           padding: "0% 10% 0% 10%",
         }}
       >
+      <Row>
+          <Col>
+            <BlogCard
+              date={"December 9th, 2020"}
+              title={"Creating a Single Page Application on GitHub Pages"}
+              body={`I ran across an interesting problem creating this blog: GitHub Pages does not natively support Single Page Applications (SPAs). 
+              \n
+              I use React for my projects, and in the past I have used react-router-dom. This allows me to navigate to other pages, rendering different elements as I go. When hosted on a server that allows for multiple routes, this is seemless. However, on GitHub Pages, the sever only allows for one route, is not controlled by the webpage developer, and does not allowing multiple routes. This becomes a problem. So I decided to make a switch.
+              \n
+              Changing my webpage to use React hooks becomes the favorable option. Instead of the navbar links using anchor tags and pathing to a different domain path, I instead made the links change a React state. Since the links are on the NavBar, my custom component, I named the state NavState, and each link changes the state to the respective name that is clicked on. When the state is changed, a conditonal element in the app will read the state, and change the rendered element based on said state! 
+              \n
+              This seemed like such an elegant solution and I am happy with my results. Not only did I get around the GitHub pages insufficiency, but using React state actually speeds up the webpage load times! Without the react-router-dom refreshing the page and rerendering unchanged elements, the page navigates smoothly and comfortably. 
+              \n
+              And most of all, this solution allows for SPAs on GitHub pages.`}
+            />
+          </Col>
+        </Row>
         <Row>
           <Col>
             <BlogCard
@@ -63,19 +80,6 @@ function Blog() {
               Although job boards have not been much help, I have had the opportunity to do a bit of networking. Everyone I have been fortunate enough to be in contact with has been so gracious and helpful. They are genuinely doing their best to help me out, and have given me good advice! It is very reassuring to know that this industry is filled with good people, all looking out for each other and trying to make the world a better place. 
               \n
               While I have been job hunting, I continue to hone my skills. I have begun a React course on Udemy to further my React skills and add on Redux, GraphQL, Stripe, and Firebase! I really have grown to love front end development.`}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <BlogCard
-              date={"December 9th, 2020"}
-              title={"Creating a Single Page Application on GitHub Pages"}
-              body={`I ran across an interesting problem creating this blog: GitHub Pages does not natively support Single Page Applictions (SPAs). 
-              \n
-              I use React for my projects, and therefore I also use react-router-dom. Going to my website: keithbillings.com the page is loaded correctly, but when routed to keithbillings.com/blog, I get a 404! I asked myself why. It worked in development, but it does not work on gh-pages. Strange.
-              \n
-              Doing some research I found that when the GitHub Pages servers load up a website, it serves it as “/” . When there is a fresh page load for a url like “example.com/foo”, where “/foo” is a frontend route, the GitHub Pages server returns 404 because it knows nothing of “/foo”.`}
             />
           </Col>
         </Row>

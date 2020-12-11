@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { Route, BrowserRouter as Router } from "react-router-dom";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 
 // AOS
 import AOS from "aos";

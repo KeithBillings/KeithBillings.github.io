@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
 // Pages
@@ -22,13 +22,20 @@ import Footer from "./components/Footer/Footer";
 AOS.init();
 
 function App() {
+  const [navState, setNavState] = useState("");
+
+  const handleClickBlog = () => {
+    setNavState("blog");
+  };
+
+  const handleClick = () => {
+    setNavState("")
+  }
+
   return (
     <Container fluid>
-      <NavBar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/blog" component={Blog} />
-      </Switch>
+      <NavBar navState={navState} setNavState={setNavState} handleClickBlog={handleClickBlog} handleClick={handleClick} />
+      <div>{navState === "blog" ? <Blog /> : <Home />}</div>
       <Footer />
     </Container>
   );
