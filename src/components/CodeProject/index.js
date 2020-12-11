@@ -16,12 +16,13 @@ function CodeProject({
   deploymentLink,
   image,
   repositoryLink,
+  imageAlt
 }) {
   return (
     <Col data-aos="fade-up">
       <Accordion>
         <Card>
-          <Card.Img variant="top" src={image} />
+          <Card.Img variant="top" src={image} alt={imageAlt} />
           <Card.Body>
             <Accordion.Toggle
               className="onHoverTextToBlue onHoverPointer"

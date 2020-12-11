@@ -105,6 +105,7 @@ function Home() {
           deploymentLink={"https://advotecate.herokuapp.com/"}
           repositoryLink={"https://github.com/KeithBillings/adVOTEcate"}
           image={advocateImage}
+          imageAlt={"screenshot of advotecate front page"}
         />
       </Row>
       <Row className="padding">
@@ -116,6 +117,7 @@ function Home() {
           deploymentLink={"https://employee-directory-kmb.herokuapp.com/"}
           repositoryLink={"https://github.com/KeithBillings/Employee-Directory"}
           image={employeeDirectoryImage}
+          imageAlt={"screenshot of employee directory page"}
         />
         <CodeProject
           data-aos="fade-up"
@@ -126,6 +128,7 @@ function Home() {
           deploymentLink={"https://partyplanningcommittee.herokuapp.com/"}
           repositoryLink={"https://github.com/KeithBillings/Party-Planner"}
           image={partyPlannerImage}
+          imageAlt={"screenshot of party planning committee front page"}
         />
       </Row>
       <Row className="padding">
@@ -134,13 +137,10 @@ function Home() {
           projectDescription={
             "This was our first major class project involving teams. The class was divided into groups of 3-4 members and we were allowed to research and come up with our own project to work on. Since this was our first team assignment, and our first self directed project, our team quickly decided that the project must be something fun and entertaining. It didn't take much time to focus on a topic that everyone could relate to: Birthdays! We learned how to use external APIs like NASA, birthday facts, number facts, zoidac, and more!"
           }
-          deploymentLink={
-            "https://keithbillings.github.io/About-Your-Birthday/"
-          }
-          repositoryLink={
-            "https://github.com/KeithBillings/About-Your-Birthday"
-          }
+          deploymentLink={"https://keithbillings.github.io/About-Your-Birthday/"}
+          repositoryLink={"https://github.com/KeithBillings/About-Your-Birthday"}
           image={aboutYourBirthdayImage}
+          imageAlt={"screenshot of about your birthday app front page"}
         />
         <CodeProject
           projectTitle={"Weather App"}
@@ -150,6 +150,7 @@ function Home() {
           deploymentLink={"https://keithbillings.github.io/Weather-Dashboard/"}
           repositoryLink={"https://github.com/KeithBillings/Weather-Dashboard"}
           image={weatherAppImage}
+          imageAlt={"screenshot of keith billings weather app"}
         />
       </Row>
       {/* Contact Info */}
