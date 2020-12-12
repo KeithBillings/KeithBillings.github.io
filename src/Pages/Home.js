@@ -161,7 +161,13 @@ function Home() {
         <Col id="contact" data-aos="fade-up">
           <h2>Contact Me</h2>
           <br></br>
-          <div className="openSans" data-aos="fade-up">
+          <div
+            className="openSans"
+            data-aos="fade-up"
+            style={{
+              paddingBottom: "2rem",
+            }}
+          >
             <p>I am currently available for work</p>
             <p>
               Email:{" "}

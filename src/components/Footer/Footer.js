@@ -6,7 +6,8 @@ function Footer() {
       {/* Footer */}
       <footer className="openSans">
         <ul className="social">
-          <li className="whiteText">External Links:</li>
+          <li className="whiteText">External Links:</li></ul>
+          <ul className="social">
           <li>
             <a href="http://www.github.com/KeithBillings">My Github</a>
           </li>
