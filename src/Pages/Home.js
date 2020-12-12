@@ -58,7 +58,6 @@ function Home() {
               animation: "fadeIn ease 2s",
               background: `url(${backgroundImages[index]})`,
             }}
-            fluid={true}
           >
             <div className="onHoverTextToBlue">Keith Billings</div>
             <div className="jumbotronSecondary">FULL STACK DEVELOPER</div>
@@ -137,8 +136,12 @@ function Home() {
           projectDescription={
             "This was our first major class project involving teams. The class was divided into groups of 3-4 members and we were allowed to research and come up with our own project to work on. Since this was our first team assignment, and our first self directed project, our team quickly decided that the project must be something fun and entertaining. It didn't take much time to focus on a topic that everyone could relate to: Birthdays! We learned how to use external APIs like NASA, birthday facts, number facts, zoidac, and more!"
           }
-          deploymentLink={"https://keithbillings.github.io/About-Your-Birthday/"}
-          repositoryLink={"https://github.com/KeithBillings/About-Your-Birthday"}
+          deploymentLink={
+            "https://keithbillings.github.io/About-Your-Birthday/"
+          }
+          repositoryLink={
+            "https://github.com/KeithBillings/About-Your-Birthday"
+          }
           image={aboutYourBirthdayImage}
           imageAlt={"screenshot of about your birthday app front page"}
         />
@@ -162,13 +165,27 @@ function Home() {
             <p>I am currently available for work</p>
             <p>
               Email:{" "}
-              <a href="mailto:keithbillingsbusiness@gmail.com">
+              <a
+                style={{
+                  fontWeight: "600",
+                }}
+                href="mailto:keithbillingsbusiness@gmail.com"
+              >
                 {" "}
                 keithbillingsbusiness@gmail.com{" "}
               </a>
             </p>
             <p>
-              Phone Number: <a href="tel:5037099897"> (503) 709-9897 </a>
+              Phone Number:{" "}
+              <a
+                style={{
+                  fontWeight: "600",
+                }}
+                href="tel:5037099897"
+              >
+                {" "}
+                (503) 709-9897{" "}
+              </a>
             </p>
             <a style={{ fontWeight: 600 }} href={`${keithResume}`} download>
               Download my resume (PDF)

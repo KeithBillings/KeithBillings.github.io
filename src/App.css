@@ -76,12 +76,9 @@ footer {
 }
 
 .jumbotron {
-  background-position: center;
   text-align: center;
-  vertical-align: center;
-  font-size: 5.5rem;
   letter-spacing: 0.5rem;
-  padding: 24%;
+  padding: 22%;
   transition: 1s;
   font-size: 6vw;
 }
