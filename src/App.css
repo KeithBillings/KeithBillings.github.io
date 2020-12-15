@@ -81,6 +81,12 @@ footer {
   padding: 22%;
   transition: 1s;
   font-size: 6vw;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 105%;
+  background-color: inherit;
+  height: 100%;
 }
 
 .jumbotronSecondary {

@@ -17,25 +17,25 @@ import BlogCard from "../components/BlogCard";
 // Initializing the Animate on Scroll functionality
 AOS.init();
 
-function Blog() {
+function Blog({smallWindowTextShadow}) {
   return (
     <>
       {/* Header and splash */}
       <Row id="blog">
-        <Col>
+        <Col
+          style={{
+            textShadow: `${smallWindowTextShadow}`,
+          }}
+        >
           <Jumbotron
             style={{
-              padding: "9%",
               animation: "fadeIn ease 2s",
-              background: `url(${headerBackgroundImage})`,
-              backgroundPosition: "50% 60%",
+              backgroundImage: `url(${headerBackgroundImage})`,
             }}
-            fluid={true}
           >
             <div
               className="onHoverTextToBlue"
               style={{
-                fontSize: "4rem",
                 paddingTop: "5%",
               }}
             >
@@ -47,7 +47,7 @@ function Blog() {
       {/* Blog Cards */}
       <Container
         style={{
-          padding: "0% 10% 0% 10%",
+          padding: "5% 10% 0% 10%",
         }}
       >
         <Row>

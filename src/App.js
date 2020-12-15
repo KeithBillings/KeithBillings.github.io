@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Pages
 import Home from "./Pages/Home";
@@ -22,19 +22,43 @@ AOS.init();
 
 function App() {
   const [navState, setNavState] = useState("");
+  const [smallWindowTextShadow, setSmallWindowTextShadow] = useState("");
 
   const handleClickBlog = () => {
     setNavState("blog");
   };
 
   const handleClick = () => {
-    setNavState("")
-  }
+    setNavState("");
+  };
+
+  // Adding Shadow to JumboTron Text for Mobile
+  const handleSmallWindowTextShadow = () => {
+    if (window.innerWidth <= 375) {
+      setSmallWindowTextShadow("0px 0px 5px white");
+    } else setSmallWindowTextShadow("");
+  };
+
+  useEffect(() => {
+    handleSmallWindowTextShadow();
+  });
+  // end of Adding Shadow to JumboTron Text for Mobile
 
   return (
     <Container fluid>
-      <NavBar navState={navState} setNavState={setNavState} handleClickBlog={handleClickBlog} handleClick={handleClick} />
-      <div>{navState === "blog" ? <Blog /> : <Home />}</div>
+      <NavBar
+        navState={navState}
+        setNavState={setNavState}
+        handleClickBlog={handleClickBlog}
+        handleClick={handleClick}
+      />
+      <div>
+        {navState === "blog" ? (
+          <Blog smallWindowTextShadow={smallWindowTextShadow} />
+        ) : (
+          <Home smallWindowTextShadow={smallWindowTextShadow} />
+        )}
+      </div>
       <Footer />
     </Container>
   );

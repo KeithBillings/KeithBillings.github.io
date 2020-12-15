@@ -27,12 +27,13 @@ import advocateImage from "../images/advotecate.png";
 // Initializing the Animate on Scroll functionality
 AOS.init();
 
-function Home() {
+function Home({smallWindowTextShadow}) {
   const [index, setIndex] = useState(0);
 
   const backgroundImages = [firstImage, secondImage, thirdImage];
   const imgKeith = [imgKeith1, imgKeith2, imgKeith3];
 
+  // Cycling Jumbotron Images
   function cycleImages() {
     if (index === 2) {
       setIndex(0);
@@ -47,16 +48,21 @@ function Home() {
     }, 5000);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index]);
+  // end of Cycling Jumbotron Images
 
   return (
     <>
       {/* Splash and Header */}
       <Row>
-        <Col>
+        <Col
+          style={{
+            textShadow: `${smallWindowTextShadow}`,
+          }}
+        >
           <Jumbotron
             style={{
               animation: "fadeIn ease 2s",
-              background: `url(${backgroundImages[index]})`,
+              backgroundImage: `url(${backgroundImages[index]})`,
             }}
           >
             <div className="onHoverTextToBlue">Keith Billings</div>
@@ -65,7 +71,7 @@ function Home() {
         </Col>
       </Row>
       {/* Body */}
-      <Row id="about" className="padding">
+      <Row id="about" className="padding" style={{ marginTop: "5%" }}>
         <Col data-aos="fade-up">
           <h2>About Me</h2>
           <br></br>
