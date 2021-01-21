@@ -16,31 +16,38 @@ function CodeProject({
   deploymentLink,
   image,
   repositoryLink,
-  imageAlt
+  imageAlt,
 }) {
   return (
     <Col data-aos="fade-up">
       <Accordion>
         <Card>
-          <Card.Img variant="top" src={image} alt={imageAlt} />
-          <Card.Body>
-            <Accordion.Toggle
-              className="onHoverTextToBlue onHoverPointer"
-              as={Card.Title}
-              eventKey="0"
-            >
-              {
-                <OverlayTrigger
-                  key={"bottom"}
-                  placement={"bottom"}
-                  overlay={
-                    <Tooltip id={`tooltip1`}>Click to learn more</Tooltip>
-                  }
-                >
-                  <Card.Title>{projectTitle}</Card.Title>
-                </OverlayTrigger>
-              }
-            </Accordion.Toggle>
+          <Accordion.Toggle
+            className="onHoverTextToBlue onHoverPointer"
+            as={Card.Title}
+            eventKey="0"
+          >
+            {
+              <OverlayTrigger
+                key={"bottom"}
+                placement={"bottom"}
+                overlay={<Tooltip id={`tooltip1`}>Click to learn more</Tooltip>}
+              >
+                <div>
+                  <Card.Img
+                    variant="top"
+                    src={image}
+                    alt={imageAlt}
+                    style={{ marginBottom: "1rem" }}
+                  />
+                  <Card.Title style={{ marginBottom: "0" }}>
+                    {projectTitle}
+                  </Card.Title>
+                </div>
+              </OverlayTrigger>
+            }
+          </Accordion.Toggle>
+          <Card.Body style={{ paddingTop: "0" }}>
             <Accordion.Collapse eventKey="0">
               <Card.Body>{projectDescription}</Card.Body>
             </Accordion.Collapse>
