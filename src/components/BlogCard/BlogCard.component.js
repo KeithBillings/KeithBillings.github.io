@@ -10,11 +10,7 @@ import { Row, Col } from "react-bootstrap";
 // Initializing the Animate on Scroll functionality
 AOS.init();
 
-function BlogCard({ date, title, body }) {
-  let blogBody = body.split("\n").map((i) => {
-    return <p className="openSans">{i}</p>;
-  });
-
+function BlogCard({ date, title, body }, key) {
   return (
     <>
       <Row>
@@ -24,8 +20,10 @@ function BlogCard({ date, title, body }) {
         </Col>
       </Row>
       <Row>
-        <Col>
-          <div>{blogBody}</div>
+        <Col className="openSans">
+          {body.split("\n").map((i) => {
+            return <p>{i}</p>;
+          })}
         </Col>
       </Row>
       <hr
