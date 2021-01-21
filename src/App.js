@@ -14,8 +14,8 @@ import { Container } from "react-bootstrap";
 
 // local
 import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
-import Footer from "./components/Footer/Footer";
+import NavBar from "./components/NavBar/NavBar.component";
+import Footer from "./components/Footer/Footer.component";
 
 // Initializing the Animate on Scroll functionality
 AOS.init();

@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col, Jumbotron } from "react-bootstrap";
 
-// local
+// images
 import "../App.css";
 import firstImage from "../images/DSC_1398.jpg";
 import secondImage from "../images/DSC_1143.jpg";
@@ -21,8 +21,10 @@ import partyPlannerImage from "../images/thumbs/PartyPlanner.png";
 import aboutYourBirthdayImage from "../images/thumbs/BirthdayApp.png";
 import weatherAppImage from "../images/thumbs/WeatherApp.png";
 import keithResume from "../images/Resume.pdf";
-import CodeProject from "../components/CodeProject";
 import advocateImage from "../images/advotecate.png";
+
+// components
+import CodeProject from "../components/CodeProject/CodeProject.component";
 
 // Initializing the Animate on Scroll functionality
 AOS.init();

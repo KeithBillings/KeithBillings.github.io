@@ -12,7 +12,7 @@ import { Row, Col, Jumbotron, Container } from "react-bootstrap";
 import headerBackgroundImage from "../images/DSC_1143.jpg";
 
 // local components
-import BlogCard from "../components/BlogCard";
+import BlogCard from "../components/BlogCard/BlogCard.component";
 
 // Initializing the Animate on Scroll functionality
 AOS.init();
