@@ -20,16 +20,22 @@ import employeeDirectoryImage from "../images/thumbs/employeeDirectory.jpg";
 import partyPlannerImage from "../images/thumbs/PartyPlanner.png";
 import aboutYourBirthdayImage from "../images/thumbs/BirthdayApp.png";
 import weatherAppImage from "../images/thumbs/WeatherApp.png";
-import keithResume from "../images/Resume.pdf";
 import advocateImage from "../images/advotecate.png";
+
+// resumes
+import keithResumePDF from "../data/Keith Billings Resume.pdf";
+import keithResumeDocx from "../data/Keith Billings Resume.docx";
 
 // components
 import CodeProject from "../components/CodeProject/CodeProject.component";
 
+// data
+import aboutMe from "../data/aboutMe.data";
+
 // Initializing the Animate on Scroll functionality
 AOS.init();
 
-function Home({smallWindowTextShadow}) {
+function Home({ smallWindowTextShadow }) {
   const [index, setIndex] = useState(0);
 
   const backgroundImages = [firstImage, secondImage, thirdImage];
@@ -78,18 +84,9 @@ function Home({smallWindowTextShadow}) {
           <h2>About Me</h2>
           <br></br>
           <p className="openSans" data-aos="fade-up">
-            I am a Full Stack Web Developer with skills in Javascript, React,
-            Mongo, HTML, CSS, Node, Express, MySQL, Sequelize, Bootstrap, and
-            more! I am motivated by a creative environment, an empowering
-            workplace, and building and working with teams. My goal is to be a
-            part of an innovative group that does high quality work and utilizes
-            my strengths.
-          </p>
-          <p className="openSans" data-aos="fade-up">
-            My strength in teamwork and leadership come from volunteer
-            firefighting and working as a maintenance engineer. I can use those
-            transferable skills in my next career path. Building applications in
-            groups prepared me for cross collaboration and version control.
+            {aboutMe.split("\n").map((i) => {
+              return <p>{i}</p>;
+            })}
           </p>
         </Col>
       </Row>
@@ -201,8 +198,12 @@ function Home({smallWindowTextShadow}) {
                 (503) 709-9897{" "}
               </a>
             </p>
-            <a style={{ fontWeight: 600 }} href={`${keithResume}`} download>
-              Download my resume (PDF)
+            <a style={{ fontWeight: 600 }} href={`${keithResumeDocx}`} download>
+              Download my resume (Docx){`  `}
+            </a>{" "}
+            or {`  `}
+            <a style={{ fontWeight: 600 }} href={`${keithResumePDF}`} download>
+              (PDF)
             </a>
           </div>
         </Col>
