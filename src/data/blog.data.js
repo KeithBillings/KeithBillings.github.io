@@ -8,7 +8,7 @@ const BlogData = [
     \n
     So far it has been a good learning experience and I expect it will continue to be so. I have learned Docker and how to set up a Container on my computer which acts like a virtual machine. I have also done some Google Authentication for logging a user in. 
     \n
-    The team has been friendly, and are encouraging everyone, for the time being, to continue looking for paid work while the startup grows and looks for funding.`
+    The team has been friendly, and are encouraging everyone, for the time being, to continue looking for paid work while the startup grows and looks for funding.`,
   },
   {
     date: `January 15th, 2021`,
@@ -38,15 +38,15 @@ const BlogData = [
   {
     date: `December 9th, 2020`,
     title: `Creating a Single Page Application on GitHub Pages`,
-    body: `I ran across an interesting problem creating this blog: GitHub Pages does not natively support Single Page Applications (SPAs). 
+    body: `I am a React developer, and when creating a portfolio or personal website that you want to deploy on GitHub pages, you will find that GitHub does not natively support single page applications (SPAs). To get around this problem you have to use a npm package called "gh-pages". This will help you with deployment. The docs and tutorials to use gh-pages are a plenty, and you can do a quick Google search to read them. 
     \n
-    I use React for my projects, and in the past I have used react-router-dom. This allows me to navigate to other pages, rendering different elements as I go. When hosted on a server that allows for multiple routes, this is seemless. However, on GitHub Pages, the sever only allows for one route, is not controlled by the webpage developer, and does not allowing multiple routes. This becomes a problem. So I decided to make a switch.
+    However, deploying a React app, is not the only hurdle. Navigating it is another. On GitHub pages, you are unable to navigate to another page, if you are rerendering the page. If your url pathname changes, you cannot have the browser tab reload. It must remain a SPA. To do this there are two ways:
     \n
-    Changing my webpage to use React hooks becomes the favorable option. Instead of the navbar links using anchor tags and pathing to a different domain path, I instead made the links change a React state. Since the links are on the NavBar, my custom component, I named the state NavState, and each link changes the state to the respective name that is clicked on. When the state is changed, a conditonal element in the app will read the state, and change the rendered element based on said state! 
+    1. For 99% percent of my projects, I use the npm package: "react-router-dom" to navigate through the pages of my SPAs. This is a lightweight and easy to use package that wraps your project in a <Router> parent element, and then uses child <Route> components that renders different components depending on the given path. If you only want one component rendering at a time, you wrap the <Routes> in a <Switch> component (still within the <Router>), which will render the first <Route> that has a matching path, then terminates the <Switch>. You can use this package page for simple naviagation, or even for conditional component rendering. For a full tutorial, you can contact me at keithbillingsbusiness@gmail.com, or check out the documentation for the package. 
     \n
-    This seemed like such an elegant solution and I am happy with my results. Not only did I get around the GitHub pages insufficiency, but using React state actually speeds up the webpage load times! Without the react-router-dom refreshing the page and rerendering unchanged elements, the page navigates smoothly and comfortably. 
+    2. The second option is manually switching a conditional statement within React using the "useState" hook. For demonstration purposes, I have done that with my personal website. Within the app, I have created a state called navState. This state is carried throughout the whole app, and the components and pages that the app contains have different ways to change that state. Then with some conditional statements that check that navState, different components load. Using React state is so fast, as it is already there, ready for you to use. This results in very quick operations, where components and pages load very quickly. This also removes any bload that the npm package may have (if any).
     \n
-    And most of all, this solution allows for SPAs on GitHub pages.`,
+    Between the two, I would pick the "react-router-dom", but I wanted to point out that it is not the only option.`,
   },
   {
     date: `December 8, 2020`,
