@@ -74,26 +74,25 @@ const theme = createMuiTheme({
 
 export default function ContactMe() {
   const classes = useStyles();
+  const contactForm = useRef(null);
+  const submitButton = useRef(null);
+
   const { register, handleSubmit } = useForm();
   const scriptURL = 'https://script.google.com/macros/s/AKfycby4Vgy5C6EMUsmKzipUp5_sjebO3XF_PELdCE5fg1cO_d3x1KGRSV7_YXfLw2-KVNFzjg/exec';
 
   const onSubmit = (data) => {
-    const submitButton = document.getElementById('contact-form-submit-button');
-    const contactForm = document.getElementById('contact-form');
 
-    submitButton.innerText = 'Submitting...';
+    submitButton.current.innerText = 'Submitting...';
 
     fetch(scriptURL, {
       method: 'POST',
-      body: new FormData(contactForm),
+      body: new FormData(contactForm.current),
     })
       .then((res) => {
-        submitButton.innerText = 'Sent!';
+        submitButton.current.innerText = 'Sent!';
         setTimeout(() => {
-          submitButton.innerText = 'Submit';
+          submitButton.current.innerText = 'Submit';
         }, 5000);
-        console.log('contact form is: ', contactForm);
-        console.log('response is: ', res);
       })
       .catch((error) => {
         console.log('error is', error);
@@ -136,7 +135,7 @@ export default function ContactMe() {
 
         <Grid container justify='center'>
           <Grid item>
-            <form id='contact-form' className={classes.contactUsForm} onSubmit={handleSubmit(onSubmit)}>
+            <form ref={contactForm} className={classes.contactUsForm} onSubmit={handleSubmit(onSubmit)}>
               <Grid container spacing={2}>
                 <Grid item xs={12}>
                   <label>Name</label>
@@ -183,7 +182,7 @@ export default function ContactMe() {
                 </Grid>
               </Grid>
               <Grid item xs={12} className={classes.alightButton}>
-                <button id='contact-form-submit-button' type='submit' className={classes.button}>
+                <button ref={submitButton} type='submit' className={classes.button}>
                   Submit
                 </button>
               </Grid>
