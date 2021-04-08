@@ -36,8 +36,8 @@ export default function HomeBodyNav() {
         </Link>
       </Grid> */}
       <Grid item xs={4} className={classes.bodyNavItem}>
-        <Link to='/blogs'>
-          <Typography variant='inherit'>{pathname === '/blogs' ? <span className={classes.active}>Blogs</span> : 'Blogs'}</Typography>
+        <Link to='/articles'>
+          <Typography variant='inherit'>{pathname === '/articles' ? <span className={classes.active}>Articles</span> : 'Articles'}</Typography>
         </Link>
       </Grid>
     </Grid>

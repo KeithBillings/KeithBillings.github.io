@@ -52,7 +52,7 @@ export default function HeroCarousel() {
         <strong>I know: </strong>
         React, Next.js, MongoDB, CSS and SCSS, HTML, Javascript, Typescript, Node.js, Material-UI, Bootstrap, and Express. <br />
         <strong>Learning: </strong>
-        GraphQL
+        Redux.js, GraphQL
       </Typography>
     </Carousel>
   );

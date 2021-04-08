@@ -23,7 +23,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Blogs() {
+export default function Artilces() {
   const classes = useStyles();
 
   return (
