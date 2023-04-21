@@ -1,0 +1,12 @@
+// Animations
+@mixin slideLeft($value, $time) {
+	@keyframes slideLeft {
+    0% {
+      right: $value;
+    }
+    100% {
+      right: 0;
+    }
+  }
+	animation: slideLeft $time forwards;
+}
