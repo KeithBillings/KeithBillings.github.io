@@ -2,7 +2,7 @@
 	background-color: $color-primary;
 	min-height: 100vh;
 	min-width: 100vw;
-	// color: $color-dark;
+	color: $color-warm-white;
 }
 
 a {
@@ -21,4 +21,7 @@ li {
 	margin: 0;
   list-style-type: none;
   transition: 0.3s;
+}
+p {
+	margin: 0;
 }

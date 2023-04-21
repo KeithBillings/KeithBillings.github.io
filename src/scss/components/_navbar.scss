@@ -6,28 +6,43 @@ $mobile-menu-width: 120px;
   position: relative;
   width: 100vw;
   height: $navbar-height;
-  background-color: $color-primary;
 }
 
-.mobile-menu {
-  @include slideLeft(-$mobile-menu-width, 0.3s);
+.logo {
+  padding: 5px 10px;
+  font-size: 20px;
+}
 
-  width: $mobile-menu-width;
-  position: absolute;
-  top: $navbar-height;
-  padding: 10px 20px;
-  background-color: $color-primary;
+.nav-menu {
+  display: flex;
+  margin-left: auto;
 
   .mobile-menu-items {
     display: flex;
-    flex-direction: column;
-		gap: 10px;
+    gap: 20px;
+    align-items: center;
+    padding-right: 20px;
+  }
 
-    .mobile-menu-item {
-      text-align: center;
+  &--mobile {
+    @include slideLeft(-$mobile-menu-width, 0.3s);
 
-      &:hover {
-        filter: drop-shadow(0px 0px 5px #000);
+    width: $mobile-menu-width;
+    position: absolute;
+    top: $navbar-height;
+    padding: 10px 20px;
+
+    .mobile-menu-items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .mobile-menu-item {
+        text-align: center;
+
+        &:hover {
+          filter: drop-shadow(0px 0px 5px #000);
+        }
       }
     }
   }

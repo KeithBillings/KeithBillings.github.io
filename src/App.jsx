@@ -5,18 +5,21 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Pages from "./Pages/Pages";
 
+// Context
+import WindowSizeProvider from "./context/WindowSizeContext";
+
 // Styles
 import "./scss/main.scss";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <Router>
-        <Navbar />
-        <Pages />
-      </Router>
-    </div>
+    <WindowSizeProvider>
+      <div className="App">
+        <Router>
+          <Navbar />
+          <Pages />
+        </Router>
+      </div>
+    </WindowSizeProvider>
   );
 }
-
-export default App;

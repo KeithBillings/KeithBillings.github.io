@@ -1,59 +1,62 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 // Components
 import { Link } from "react-router-dom";
 import OptionalComponent from "../OptionalComponent/OptionalComponent";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 
+// Context
+import { WindowSize } from "../../context/WindowSizeContext";
+
 export default function Navbar() {
-  const [mobileMenu, setMobileMenu] = useState(false);
   const [mobileMenuToggle, setMobileMenuToggle] = useState(false);
 
-  const showButton = () => {
-    if (window.innerWidth < 768) {
-      setMobileMenu(true);
-    } else {
-      setMobileMenu(false);
-    }
-  };
+  // use the useContext hook to access the WindowSize context
+  const { isMobile } = useContext(WindowSize);
 
   // toggle mobile menu
   const handleMobileMenuToggle = () => {
     setMobileMenuToggle(!mobileMenuToggle);
   };
 
-  // show button on resize
-  useEffect(() => {
-    showButton();
-    window.addEventListener("resize", showButton);
-  }, []);
+	function NavMenuLinks (){
+		return (
+      <ul className="mobile-menu-items">
+        <li className="mobile-menu-item">
+          <Link to="/" className="mobile-menu-links">
+            Home
+          </Link>
+        </li>
+        <li className="mobile-menu-item">
+          <Link to="/about" className="mobile-menu-links">
+            About Me
+          </Link>
+        </li>
+        <li className="mobile-menu-item">
+          <Link to="/contact" className="mobile-menu-links">
+            Contact Me
+          </Link>
+        </li>
+      </ul>
+    );
+	}
 
   return (
     <div className="navbar">
-      <OptionalComponent condition={mobileMenu}>
+      <p className="logo">{`{.kb}`}</p>
+      <OptionalComponent condition={isMobile}>
         <HamburgerMenu callback={handleMobileMenuToggle} className={"mobile-menu-icon"} activeToggle={mobileMenuToggle} />
         <OptionalComponent condition={mobileMenuToggle}>
-          <div className="mobile-menu">
-            <ul className="mobile-menu-items">
-              <li className="mobile-menu-item">
-                <Link to="/" className="mobile-menu-links">
-                  Home
-                </Link>
-              </li>
-              <li className="mobile-menu-item">
-                <Link to="/about" className="mobile-menu-links">
-                  About Me
-                </Link>
-              </li>
-              <li className="mobile-menu-item">
-                <Link to="/contact" className="mobile-menu-links">
-                  Contact Me
-                </Link>
-              </li>
-            </ul>
+          <div className="nav-menu--mobile">
+            <NavMenuLinks />
           </div>
         </OptionalComponent>
       </OptionalComponent>
+			<OptionalComponent condition={!isMobile}>
+				<div className="nav-menu">
+					<NavMenuLinks />
+				</div>
+			</OptionalComponent>
     </div>
   );
 }
