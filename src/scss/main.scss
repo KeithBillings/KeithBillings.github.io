@@ -4,7 +4,12 @@
 
 // Mixins
 @import "./mixins/mixins";
+@import "./mixins/media-queries";
+
+// Pages
+@import "./pages/home";
 
 // Components
 @import "./components/navbar";
 @import "./components/hamburgerIcon";
+@import "./components/hero";

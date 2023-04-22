@@ -1,8 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: $color-primary;
+  color: $color-warm-white;
+}
+
 .App {
-	background-color: $color-primary;
-	min-height: 100vh;
-	min-width: 100vw;
-	color: $color-warm-white;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 a {
@@ -11,17 +26,70 @@ a {
   transition: 0.3s;
 }
 
-ul {
-	padding: 0;
-	margin: 0;
-}
-
 li {
-	padding: 0;
-	margin: 0;
   list-style-type: none;
   transition: 0.3s;
 }
-p {
-	margin: 0;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a,
+button,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color-dark;
+  background-color: $color-light;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  background-color: $color-warm-white;
+}
+
+input[type="submit"] {
+  background-color: $color-secondary;
+  color: $color-warm-white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: 0.3s;
+  cursor: pointer;
 }

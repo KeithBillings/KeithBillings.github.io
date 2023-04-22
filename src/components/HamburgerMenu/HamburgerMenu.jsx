@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-
 export default function HamburgerMenu({ callback, className, activeToggle }) {
   return (
     <div onClick={callback} className={activeToggle ? `${className} active` : className}>
