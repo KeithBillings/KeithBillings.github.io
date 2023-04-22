@@ -1,3 +1,5 @@
+import keith from "../assets/images/keith.png";
+
 export default function Home() {
   // use the useContext hook to access the WindowSize context
 
@@ -11,7 +13,7 @@ export default function Home() {
           <h1 className="hero-text__title">Web developer</h1>
         </div>
         <div className="hero-image">
-          <img src="" alt="Keith Billings" />
+          <img src={keith} alt="Keith Billings" />
         </div>
       </div>
     );
