@@ -12,6 +12,7 @@
 
   @include tablet() {
     max-width: 100vw;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   @include mobile() {
@@ -27,20 +28,35 @@
     padding-bottom: 20%;
     padding-left: 10%;
 
-    &--greeting {
+    @include tablet() {
+      padding-left: 0;
+      padding-bottom: 50%;
+    }
+    @include mobile() {
+      padding-left: 0;
+      padding-bottom: 50%;
+    }
+
+    &__greeting {
       color: $color-light;
       font-size: 26px;
       margin-left: 5px;
     }
-    &--name {
+    &__name {
       font-size: 68px;
     }
-    &--title {
+    &__title {
       font-size: 18px;
       margin-left: 5px;
     }
   }
 
   .hero-image {
+    transition: all 0.3s;
+
+    @include tablet() {
+      position: absolute;
+      bottom: 0;
+    }
   }
 }

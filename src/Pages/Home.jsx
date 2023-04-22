@@ -6,9 +6,9 @@ export default function Home() {
     return (
       <div className={"hero"}>
         <div className="hero-text">
-          <h1 className="hero-text--greeting">Hello, World! I'm,</h1>
-          <h1 className="hero-text--name">Keith Billings</h1>
-          <h1 className="hero-text--title">Web developer</h1>
+          <h1 className="hero-text__greeting">Hello, World! I'm,</h1>
+          <h1 className="hero-text__name">Keith Billings</h1>
+          <h1 className="hero-text__title">Web developer</h1>
         </div>
         <div className="hero-image">
           <img src="" alt="Keith Billings" />
