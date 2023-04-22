@@ -1,4 +1,4 @@
-import keith from "../assets/images/keith.png";
+import keith from "../assets/images/IMG_0944.png";
 
 export default function Home() {
   // use the useContext hook to access the WindowSize context
