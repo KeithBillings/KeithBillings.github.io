@@ -69,6 +69,11 @@ textarea {
 button {
   border: none;
   cursor: pointer;
+	font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+	font-size: inherit;
 }
 
 input,

@@ -6,7 +6,7 @@
   position: relative;
   z-index: 1;
 
-  ::after {
+  &:after {
     content: "";
     position: absolute;
     background: $color-primary;
@@ -27,6 +27,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
+    position: relative;
 
     @include tablet() {
       grid-template-columns: repeat(1, 1fr);
@@ -67,7 +68,7 @@
   }
 
   &__image-wrapper {
-    height: 13rem;
+    height: 12rem;
     width: 100%;
     padding: 2rem 5rem;
   }
@@ -76,6 +77,7 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
+    filter: grayscale(1);
   }
 
   &__content {
@@ -85,19 +87,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  &__overlay {
-    height: 100%;
-    width: 100%;
-    background-color: $color-primary-dark-60;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    z-index: 1;
   }
 
   &__title {
@@ -133,17 +122,99 @@
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
-		margin-top: auto;
+    margin-top: auto;
+
+    span {
+      pointer-events: none;
+    }
+
+    // hide the default scrolling bar on hover
+    &::after {
+      visibility: hidden;
+    }
+
+    span {
+      // create a scrolling underline on hover
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: $color-warm-white;
+        transition: width 0.3s;
+      }
+    }
 
     &:hover {
       background-color: $color-primary-dark;
+
+      span {
+        // animate a scrolling underline on hover
+        &::after {
+          width: 100%;
+        }
+      }
     }
 
     &__icon {
       margin-right: 0.5rem;
+    }
+  }
+
+  &__overlay {
+    max-width: 1440px;
+    background-color: $color-primary-dark-90;
+    border-radius: 1rem;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+
+    &.active {
+      @include wipeTopLeft(0.3s);
+    }
+
+    &__exit {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      background-color: transparent;
+
+      svg {
+        fill: $color-warm-white;
+      }
+    }
+
+    &__header {
+      display: flex;
+      height: 13rem;
+      width: 100%;
+      padding: 2rem 5rem;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__image {
+      height: 100%;
+      width: fit-content;
+      filter: invert(1) grayscale(1);
+    }
+
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    &__description {
+      font-size: 1.5rem;
+      text-align: justify;
+      padding: 2.5rem;
     }
   }
 }
