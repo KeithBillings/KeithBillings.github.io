@@ -6,6 +6,7 @@ import AboutMe from "../components/AboutMe/AboutMe";
 // Images
 import keith from "../assets/images/IMG_0944.png";
 import Skills from "../components/Skills/Skills";
+import Experiences from "../components/Experiences/Experiences";
 
 export default function Home(props) {
   // Refs
@@ -85,6 +86,7 @@ export default function Home(props) {
       <Hero />
       <AboutMe />
 			<Skills />
+			<Experiences />
     </div>
   );
 }

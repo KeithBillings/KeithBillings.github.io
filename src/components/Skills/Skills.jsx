@@ -68,6 +68,11 @@ function Skills() {
     },
   ];
 
+  // const handleOverlayClick = (e) => {
+  //   const overlay = e.target;
+  //   overlay.classList.toggle("active");
+  // };
+
   return (
     <section className="skills">
       <h2 className="skills__title">Skills</h2>
@@ -75,7 +80,7 @@ function Skills() {
         {skillsList.map((skill, index) => (
           <div key={index} className="skills__card">
             <div className="skills__icon">{skill.icon}</div>
-            <div className="skills__overlay">
+            <div className={`skills__overlay ${index % 2 ? "left" : "right"}`.trim()}>
               <p className="skills__name">{skill.name}</p>
               <p className="skills__description">{skill.description}</p>
             </div>

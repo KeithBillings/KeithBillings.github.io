@@ -31,11 +31,11 @@
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: relative;
-    height: 10rem;
+    height: 11rem;
 
     &:hover {
       .skills__overlay {
-        @include wipeTopRight(0.3s);
+        @include wipeTopLeft(0.3s);
       }
     }
   }
@@ -63,13 +63,19 @@
     justify-content: center;
     padding: 2rem;
     gap: 1rem;
+
+    // &.active {
+    //   @include wipeTopLeft(0.3s);
+    // }
   }
 
   &__name {
     font-size: 2rem;
+    pointer-events: none;
   }
 
   &__description {
     font-size: 1.5rem;
+    pointer-events: none;
   }
 }
