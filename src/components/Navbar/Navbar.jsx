@@ -41,22 +41,31 @@ export default function Navbar() {
     );
   }
 
-  return (
-    <div className="navbar">
-      <p className="logo">{`{.kb}`}</p>
-      <OptionalComponent condition={isMobile}>
+  function MobileMenu() {
+    return (
+      <>
         <HamburgerMenu callback={handleMobileMenuToggle} className={"mobile-menu-icon"} activeToggle={mobileMenuToggle} />
         <OptionalComponent condition={mobileMenuToggle}>
           <div className="nav-menu--mobile">
             <NavMenuLinks />
           </div>
         </OptionalComponent>
-      </OptionalComponent>
-      <OptionalComponent condition={!isMobile}>
-        <div className="nav-menu">
-          <NavMenuLinks />
-        </div>
-      </OptionalComponent>
+      </>
+    );
+  }
+
+  function DesktopMenu() {
+    return (
+      <div className="nav-menu">
+        <NavMenuLinks />
+      </div>
+    );
+  }
+
+  return (
+    <div className="navbar">
+      <p className="logo">{`{.kb}`}</p>
+      {isMobile ? <MobileMenu /> : <DesktopMenu />}
     </div>
   );
 }
