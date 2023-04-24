@@ -173,10 +173,24 @@
     z-index: 1;
     position: absolute;
     height: 100%;
+    width: 100%;
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
 
+    ::after {
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color-primary-20;
+      z-index: -1;
+      border-radius: 1rem;
+    }
+
     &.active {
-      @include wipeTopLeft(0.3s);
+      @include wipeTopLeftFull(0.3s);
     }
 
     &__exit {

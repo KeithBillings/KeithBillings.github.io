@@ -106,6 +106,21 @@ $animation-counter: 0;
   animation: #{$animation-name} $time forwards;
 }
 
+// Wipe top left mixin - no clip-path cut out
+@mixin wipeTopLeftFull($time) {
+  $animation-counter: $animation-counter + 1 !global;
+  $animation-name: "wipeTopLeft-#{$animation-counter}";
+  @keyframes #{$animation-name} {
+    0% {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  animation: #{$animation-name} $time forwards;
+}
+
 // Wipe top right mixin
 @mixin wipeTopRight($time) {
   $animation-counter: $animation-counter + 1 !global;

@@ -7,6 +7,7 @@ import AboutMe from "../components/AboutMe/AboutMe";
 import keith from "../assets/images/IMG_0944.png";
 import Skills from "../components/Skills/Skills";
 import Experiences from "../components/Experiences/Experiences";
+import Companies from "../components/Companies/Companies";
 
 export default function Home(props) {
   // Refs
@@ -87,6 +88,7 @@ export default function Home(props) {
       <AboutMe />
 			<Skills />
 			<Experiences />
+			<Companies />
     </div>
   );
 }

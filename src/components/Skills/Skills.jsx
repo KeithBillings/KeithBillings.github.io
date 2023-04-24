@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { FaReact, FaNode, FaFigma, FaGithub, FaHtml5, FaPython } from "react-icons/fa";
 import { IoLogoJavascript, IoLogoSass } from "react-icons/io";
 import { SiNextdotjs, SiMongodb, SiJira } from "react-icons/si";
 import { TbBrandTypescript } from "react-icons/tb";
 
+// Context
+import { WindowSize } from "../../context/WindowSizeContext";
+import OptionalComponent from "../OptionalComponent/OptionalComponent";
+
 function Skills() {
+  const [showAllSkills, setShowAllSkills] = useState(false);
+
+  const { isMobile } = useContext(WindowSize);
+
   const skillsList = [
     {
       name: "React",
@@ -68,16 +76,11 @@ function Skills() {
     },
   ];
 
-  // const handleOverlayClick = (e) => {
-  //   const overlay = e.target;
-  //   overlay.classList.toggle("active");
-  // };
-
   return (
     <section className="skills">
       <h2 className="skills__title">Skills</h2>
       <div className="skills__grid">
-        {skillsList.map((skill, index) => (
+        {skillsList.slice(0, isMobile ? (showAllSkills ? skillsList.length : 5) : skillsList.length).map((skill, index) => (
           <div key={index} className="skills__card">
             <div className="skills__icon">{skill.icon}</div>
             <div className={`skills__overlay ${index % 2 ? "left" : "right"}`.trim()}>
@@ -87,6 +90,11 @@ function Skills() {
           </div>
         ))}
       </div>
+      <OptionalComponent condition={isMobile}>
+        <button className="skills__button" onClick={() => setShowAllSkills(!showAllSkills)}>
+          <span>{showAllSkills ? "Show Less" : "Show More"}</span>
+        </button>
+      </OptionalComponent>
     </section>
   );
 }
