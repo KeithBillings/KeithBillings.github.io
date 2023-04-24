@@ -1,96 +1,111 @@
 // hero section for home page
 .hero {
-  height: calc(100vh - 40px);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 1440px;
   width: 100%;
-  justify-items: center;
-  transition: all 0.3s;
-  position: relative;
+  height: calc(100vh - 40px);
+  background: linear-gradient(180deg, $color-primary-dark-0 0%, $color-primary-dark-50 100%);
 
-  // a partially transparent shadow gradient at the bottom of the hero to make it look like its fading into the background
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    // center the gradient horizontally to the screen
-    left: 50%;
-    transform: translateX(-50%);
-    // make the gradient 100% of the screen width and 20% of the screen height
-    width: 100vw;
-    height: 20%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  }
+  // create geometric cut out at bottom
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
-  @include tablet() {
-    max-width: 100vw;
-    grid-template-columns: repeat(1, 1fr);
-  }
+  // center contents
+  display: flex;
+  justify-content: center;
 
-  @include mobile() {
-    max-width: 100vw;
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .hero-text {
+  .hero-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1440px;
+    width: 100%;
+    justify-items: center;
     transition: all 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: fit-content;
-    padding-bottom: 20%;
-    padding-left: 10%;
+    position: relative;
+    height: 100%;
 
-    @include tablet() {
-      padding-left: 0;
-      padding-bottom: 50%;
-    }
-    @include mobile() {
-      padding-left: 0;
-      padding-bottom: 50%;
-    }
-
-    &__greeting {
-      color: $color-light;
-      font-size: 2.6rem;
-      margin-left: 5px;
-    }
-    &__name {
-      font-size: 6.8rem;
-      font-family: "Cinzel Decorative";
-    }
-    &__title {
-      font-size: 1.8rem;
-      margin-left: 5px;
-    }
-  }
-
-  .hero-image {
-    transition: all 0.3s;
-    height: calc(90vh - 40px);
-    z-index: -1;
-    margin-top: auto;
-    margin-left: auto;
-
-    @include tablet() {
-      height: 100%;
-      max-height: 60vh;
+    // a partially transparent shadow gradient at the bottom of the hero to make it look like its fading into the background
+    &::after {
+      content: "";
       position: absolute;
       bottom: 0;
-      right: 0;
-    }
-    @include mobile() {
-      height: 100%;
-      max-height: 60vh;
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      // center the gradient horizontally to the screen
+      left: 50%;
+      transform: translateX(-50%);
+      // make the gradient 100% of the screen width and 20% of the screen height
+      width: 100vw;
+      height: 20%;
+      background: linear-gradient(180deg, $color-primary-dark-0 0%, $color-primary-dark-50 100%);
     }
 
-    img {
-      height: 100%;
-      filter: opacity(0.95) drop-shadow(10px 10px 10px rgba(171, 171, 171, 0.5));
+    @include tablet() {
+      max-width: 100vw;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include mobile() {
+      max-width: 100vw;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hero-text {
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: fit-content;
+      padding-bottom: 20%;
+      padding-left: 10%;
+
+      @include tablet() {
+        padding-left: 0;
+        padding-bottom: 50%;
+      }
+      @include mobile() {
+        padding-left: 0;
+        padding-bottom: 50%;
+      }
+
+      &__greeting {
+        color: $color-primary-light;
+        font-size: 2.6rem;
+        margin-left: 5px;
+      }
+      &__name {
+        font-size: 6.8rem;
+        font-family: "Cinzel Decorative";
+        text-shadow: 5px 5px 10px $color-warm-black-50;
+      }
+      &__title {
+        font-size: 1.8rem;
+        margin-left: 5px;
+				height: 2.7rem;
+      }
+    }
+
+    .hero-image {
+      transition: all 0.3s;
+      height: calc(90vh - 40px);
+      z-index: -1;
+      margin-top: auto;
+      margin-left: auto;
+
+      @include tablet() {
+        height: 100%;
+        max-height: 60vh;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      @include mobile() {
+        height: 100%;
+        max-height: 60vh;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      img {
+        height: 100%;
+        filter: opacity(0.95) drop-shadow(5px 5px 10px $color-warm-black-50);
+      }
     }
   }
 }
