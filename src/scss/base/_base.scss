@@ -18,12 +18,29 @@ body {
 .App {
   min-height: 100vh;
   min-width: 100vw;
+  cursor: default;
 }
 
 a {
   text-decoration: none;
   color: inherit;
   transition: 0.3s;
+
+  // animate a scrolling underline on hover
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: $color-warm-white;
+    transition: width 0.3s;
+  }
 }
 
 li {
@@ -93,22 +110,4 @@ input[type="submit"] {
   line-height: 1.5;
   transition: 0.3s;
   cursor: pointer;
-}
-
-// animate a scrolling underline on hover
-a {
-  &:hover {
-    &::after {
-      width: 100%;
-    }
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    background-color: $color-warm-white;
-    transition: width 0.3s;
-  }
 }

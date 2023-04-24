@@ -70,3 +70,27 @@
   }
   animation: fadeOut $time forwards;
 }
+
+@mixin wipeTopLeft($time) {
+  @keyframes wipeTopLeft {
+    0% {
+      clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  animation: wipeTopLeft $time forwards;
+}
+
+@mixin wipeTopRight($time) {
+  @keyframes wipeTopRight {
+    0% {
+      clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  animation: wipeTopRight $time forwards;
+}
