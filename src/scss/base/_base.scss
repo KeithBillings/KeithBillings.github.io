@@ -46,7 +46,7 @@ input,
 textarea {
   margin: 0;
   padding: 0;
-	font-weight: 400;
+  font-weight: 400;
 }
 
 button {
@@ -93,4 +93,22 @@ input[type="submit"] {
   line-height: 1.5;
   transition: 0.3s;
   cursor: pointer;
+}
+
+// animate a scrolling underline on hover
+a {
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: $color-warm-white;
+    transition: width 0.3s;
+  }
 }

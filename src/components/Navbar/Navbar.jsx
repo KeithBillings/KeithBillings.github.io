@@ -19,8 +19,8 @@ export default function Navbar() {
     setMobileMenuToggle(!mobileMenuToggle);
   };
 
-	function NavMenuLinks (){
-		return (
+  function NavMenuLinks() {
+    return (
       <ul className="mobile-menu-items">
         <li className="mobile-menu-item">
           <Link to="/" className="mobile-menu-links">
@@ -39,7 +39,7 @@ export default function Navbar() {
         </li>
       </ul>
     );
-	}
+  }
 
   return (
     <div className="navbar">
@@ -52,11 +52,11 @@ export default function Navbar() {
           </div>
         </OptionalComponent>
       </OptionalComponent>
-			<OptionalComponent condition={!isMobile}>
-				<div className="nav-menu">
-					<NavMenuLinks />
-				</div>
-			</OptionalComponent>
+      <OptionalComponent condition={!isMobile}>
+        <div className="nav-menu">
+          <NavMenuLinks />
+        </div>
+      </OptionalComponent>
     </div>
   );
 }

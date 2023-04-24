@@ -1,21 +1,32 @@
 import { useRef, useEffect } from "react";
 
-// Image
+// Components
+import AboutMe from "../components/AboutMe/AboutMe";
+
+// Images
 import keith from "../assets/images/IMG_0944.png";
 
-export default function Home() {
+export default function Home(props) {
   // Refs
   const greeting = useRef(null);
   const title = useRef(null);
 
+	// Props
+  const { scrollTo } = props;
+
+	// Greeting and title animation
   useEffect(() => {
     // Greeting animation
     const greetingText = "Hello, World! I'm,";
     // Clear greeting
     greeting.current.innerHTML = "";
+
     // Loop through each letter in greetingText
     for (let i = 0; i < greetingText.length; i++) {
       setTimeout(() => {
+        if (!greeting.current) {
+          return;
+        }
         greeting.current.innerHTML += greetingText[i];
       }, 80 * i);
       // 80ms delay between each letter
@@ -29,10 +40,23 @@ export default function Home() {
     // Loop through each letter in titleText
     for (let i = 0; i < titleText.length; i++) {
       setTimeout(() => {
+        if (!title.current) {
+          return;
+        }
         title.current.innerHTML += titleText[i];
-      }, 80 * i + 1440);
+      }, 80 * i + 1440); // add 1440ms delay to start after greeting animation
     }
   }, []);
+
+  // Scroll to about section
+  useEffect(() => {
+    if (scrollTo === "about") {
+      document.querySelector(".about-me").scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [scrollTo]);
 
   function Hero() {
     return (
@@ -58,6 +82,7 @@ export default function Home() {
   return (
     <div className="home">
       <Hero />
+      <AboutMe />
     </div>
   );
 }

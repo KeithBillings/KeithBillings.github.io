@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function AboutMe() {
   return (
-    <div>
+    <div className="about-me">
       <h1>About Me</h1>
       <p>
         Hello! I am Keith Billings, a highly motivated front-end specialist with a passion for creating exceptional web experiences. Based in Beaverton, Oregon, I have honed my expertise in React and other web technologies through professional
