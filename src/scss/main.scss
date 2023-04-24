@@ -5,15 +5,9 @@
 
 // Mixins
 @import "./mixins/mixins";
-@import "./mixins/media-queries";
 
 // Pages
-@import "./pages/home";
-@import "./pages/contact";
+@import "./pages/pages";
 
 // Components
-@import "./components/about";
-@import "./components/hamburgerIcon";
-@import "./components/hero";
-@import "./components/navbar";
-@import "./components/skills";
+@import "./components/components";
