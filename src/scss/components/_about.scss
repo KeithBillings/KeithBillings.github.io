@@ -1,0 +1,32 @@
+.about-me {
+  padding: 3rem 10%;
+  background: $color-primary;
+  color: $color-white;
+  text-align: justify;
+  max-width: 1440px;
+  width: 100%;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__description {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+		@include tablet() {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		@include mobile() {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 2rem;
+		}
+  }
+}

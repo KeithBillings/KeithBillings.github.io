@@ -11,10 +11,10 @@ export default function Home(props) {
   const greeting = useRef(null);
   const title = useRef(null);
 
-	// Props
+  // Props
   const { scrollTo } = props;
 
-	// Greeting and title animation
+  // Greeting and title animation
   useEffect(() => {
     // Greeting animation
     const greetingText = "Hello, World! I'm,";
