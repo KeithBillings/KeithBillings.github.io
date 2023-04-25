@@ -1,31 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.44bb0092.chunk.css",
-    "main.js": "/static/js/main.d4bd9dfa.chunk.js",
-    "main.js.map": "/static/js/main.d4bd9dfa.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d0605945.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d0605945.js.map",
-    "static/css/2.7fc9bc2b.chunk.css": "/static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.e3afa902.chunk.js": "/static/js/2.e3afa902.chunk.js",
-    "static/js/2.e3afa902.chunk.js.map": "/static/js/2.e3afa902.chunk.js.map",
+    "main.css": "/static/css/main.84d7654b.css",
+    "main.js": "/static/js/main.c78bcf8a.js",
+    "static/media/portland.png": "/static/media/portland.39d0877442a711f2ee29.png",
+    "static/media/keith2.png": "/static/media/keith2.1117ed94632e6fdecae9.png",
+    "static/media/brandlive_logo.png": "/static/media/brandlive_logo.0ab794dc8f4d274cb2f5.png",
+    "static/media/oregon_logo.png": "/static/media/oregon_logo.47035ed650291e757856.png",
     "index.html": "/index.html",
-    "static/css/2.7fc9bc2b.chunk.css.map": "/static/css/2.7fc9bc2b.chunk.css.map",
-    "static/css/main.44bb0092.chunk.css.map": "/static/css/main.44bb0092.chunk.css.map",
-    "static/js/2.e3afa902.chunk.js.LICENSE.txt": "/static/js/2.e3afa902.chunk.js.LICENSE.txt",
-    "static/media/BirthdayApp.d4ca536d.png": "/static/media/BirthdayApp.d4ca536d.png",
-    "static/media/Keith Billings Resume.527040d6.pdf": "/static/media/Keith Billings Resume.527040d6.pdf",
-    "static/media/Keith Billings Resume.d62bbc3b.docx": "/static/media/Keith Billings Resume.d62bbc3b.docx",
-    "static/media/PartyPlanner.101baa45.png": "/static/media/PartyPlanner.101baa45.png",
-    "static/media/WeatherApp.5b0ffb77.png": "/static/media/WeatherApp.5b0ffb77.png",
-    "static/media/advotecate.0ef3a7b1.png": "/static/media/advotecate.0ef3a7b1.png",
-    "static/media/employeeDirectory.4c20095d.jpg": "/static/media/employeeDirectory.4c20095d.jpg",
-    "static/media/me2.0d2cc462.jpg": "/static/media/me2.0d2cc462.jpg"
+    "main.84d7654b.css.map": "/static/css/main.84d7654b.css.map",
+    "main.c78bcf8a.js.map": "/static/js/main.c78bcf8a.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.d0605945.js",
-    "static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.e3afa902.chunk.js",
-    "static/css/main.44bb0092.chunk.css",
-    "static/js/main.d4bd9dfa.chunk.js"
+    "static/css/main.84d7654b.css",
+    "static/js/main.c78bcf8a.js"
   ]
 }
