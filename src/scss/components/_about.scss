@@ -1,0 +1,45 @@
+.about-me {
+  padding: 3rem 10%;
+  color: $color-white;
+  text-align: justify;
+  max-width: 1440px;
+  width: 100%;
+  position: relative;
+	z-index: 1;
+
+  ::after {
+    content: "";
+    position: absolute;
+    background: $color-primary;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  &__description {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    @include tablet() {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include mobile() {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

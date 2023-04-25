@@ -1,0 +1,46 @@
+.mobile-menu-icon {
+  margin-left: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  div {
+    transition: all 0.3s;
+  }
+
+  &--bar-1,
+  &--bar-2,
+  &--bar-3 {
+    width: 25px;
+    height: 3px;
+    background-color: $color-warm-white;
+    border-radius: 3px;
+  }
+
+  &--bar-1 {
+    transform: rotate(0) translate(0);
+  }
+  &--bar-2 {
+    opacity: 1;
+  }
+  &--bar-3 {
+    transform: rotate(0) translate(0);
+  }
+
+  &.active {
+    .mobile-menu-icon {
+      &--bar-1 {
+        transform: rotate(45deg) translate(5px, 5px);
+        width: 23px;
+      }
+      &--bar-2 {
+        opacity: 0;
+      }
+      &--bar-3 {
+        transform: rotate(-45deg) translate(3px, -4.5px);
+        width: 24px;
+      }
+    }
+  }
+}

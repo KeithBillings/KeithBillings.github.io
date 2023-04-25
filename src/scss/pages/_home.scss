@@ -1,0 +1,7 @@
+.home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// make the background $color-primary-dark but only start the "gradient" at 40% of the screen height
+	background: linear-gradient(180deg, rgba(42, 62, 77, 0) 10vw, #2a3e4d 10vw);
+}
