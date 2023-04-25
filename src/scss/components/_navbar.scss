@@ -1,13 +1,9 @@
-$navbar-height: 40px;
-$mobile-menu-width: 15rem;
-
 .navbar {
   display: flex;
-  position: relative;
   width: 100vw;
   height: $navbar-height;
   z-index: 10;
-	background-color: $color-primary;
+  position: absolute;
 
   .logo {
     padding: 5px 10px;
