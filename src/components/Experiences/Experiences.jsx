@@ -16,7 +16,7 @@ export default function Experiences() {
       title: "Web Developer",
       description: "I am currently working as a Web Developer at a startup called Brandlive. I am working on the custom dev team, and I am responsible for building and maintaining the frontend features and events.",
       fullDescription:
-        "I am currently working as a Web Developer at a startup called Brandlive. I am working on the custom dev team, and I am responsible for building and maintaining the frontend features and events. Front end specialist. Part of the custom development team, and one of the platform dev teams. Creates new features, fixes UI bugs, and builds entire custom events . Works on the streaming platform, integrates metrics, APIs, widgets, custom components, and more. Work has been seen by millions across the globe. Currently in a leadership position, leads projects, teaches, and reviews code, along with normal day to day duties.",
+        "I am currently working as a Web Developer at a startup called Brandlive. I am working on the custom dev team, and I am responsible for building and maintaining the frontend features and events. Front end specialist. Part of the custom development team, and one of the platform dev teams. Creates new features, fixes UI bugs, and builds entire custom events. Works on the streaming platform, integrates metrics, APIs, widgets, custom components, and more. Work has been seen by millions across the globe. Currently in a leadership position, leads projects, teaches, and reviews code, along with normal day to day duties.",
       image: brandlive,
     },
     {
