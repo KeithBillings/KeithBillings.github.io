@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef } from "react";
+import React, { useState, useContext } from "react";
 
 // Images
 import brandlive from "../../assets/images/brandlive_logo.png";

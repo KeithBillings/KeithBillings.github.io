@@ -27,7 +27,7 @@ export default function Home(props) {
       <AboutMe />
       <Skills />
       <Experiences />
-      <Companies />
+      {/* <Companies /> */}
     </div>
   );
 }
