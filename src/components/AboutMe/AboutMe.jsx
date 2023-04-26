@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import AboutMeContext from "../../context/AboutMeContext";
 
 export default function AboutMe() {
+  const aboutMeRef = useContext(AboutMeContext);
+
   return (
-    <div className="about-me">
+    <div className="about-me" ref={aboutMeRef}>
       <h2 className="about-me__title">About Me</h2>
       <div className="about-me__description">
         <p>

@@ -3,6 +3,7 @@ import { useState, useEffect, createContext } from "react";
 export const WindowSize = createContext();
 
 export default function WindowSizeProvider({ children }) {
+  const [windowScrolLDistance, setWindowScrollDistance] = useState(document?.documentElement?.scrollTop);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -11,6 +12,16 @@ export default function WindowSizeProvider({ children }) {
   const handleWindowResize = () => {
     setWindowWidth(window.innerWidth);
   };
+
+  const handleWindowScroll = () => {
+    setWindowScrollDistance(document.documentElement.scrollTop);
+  };
+
+  // add scroll listener
+  useEffect(() => {
+    window.addEventListener("scroll", handleWindowScroll);
+    return () => window.removeEventListener("scroll", handleWindowScroll);
+  }, []);
 
   // add window listener
   useEffect(() => {
@@ -37,5 +48,5 @@ export default function WindowSizeProvider({ children }) {
     }
   }, [windowWidth]);
 
-  return <WindowSize.Provider value={{ windowWidth, isMobile, isTablet, isDesktop }}>{children}</WindowSize.Provider>;
+  return <WindowSize.Provider value={{ windowWidth, isMobile, isTablet, isDesktop, windowScrolLDistance }}>{children}</WindowSize.Provider>;
 }
