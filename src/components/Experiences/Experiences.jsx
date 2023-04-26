@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState, useContext, useRef } from "react";
 
 // Images
 import brandlive from "../../assets/images/brandlive_logo.png";
@@ -7,9 +7,14 @@ import oregonLogo from "../../assets/images/oregon_logo.png";
 // Icons
 import { IoClose } from "react-icons/io5";
 
+// Context
+import ExperiencesContext from "../../context/ExperiencesContext";
+
 export default function Experiences() {
   const [activeExperience, setActiveExperience] = useState(0);
   const [overlayActive, setOverlayActive] = useState(false);
+
+  const experiencesRef = useContext(ExperiencesContext);
 
   const experienceList = [
     {
@@ -42,7 +47,7 @@ export default function Experiences() {
   };
 
   return (
-    <section className="experiences">
+    <section className="experiences" ref={experiencesRef}>
       <h2 className="experiences__title">My Experience</h2>
       <div className="experiences__container">
         {/* Experience Cards */}

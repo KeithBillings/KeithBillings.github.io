@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 // Components
 import { Link } from "react-router-dom";
@@ -7,12 +7,21 @@ import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 
 // Context
 import { WindowSize } from "../../context/WindowSizeContext";
+import AboutMeContext from "../../context/AboutMeContext";
+import ExperiencesContext from "../../context/ExperiencesContext";
+
+// Utils
+import debounce from "../../utils/debounce";
 
 export default function Navbar() {
   const [mobileMenuToggle, setMobileMenuToggle] = useState(false);
+  const [dynamicBackground, setDynamicBackground] = useState(false);
 
-  // use the useContext hook to access the WindowSize context
+  // Context
   const { isMobile } = useContext(WindowSize);
+
+  const aboutMeRef = useContext(AboutMeContext);
+  const experiencesRef = useContext(ExperiencesContext);
 
   // toggle mobile menu
   const handleMobileMenuToggle = () => {
@@ -62,8 +71,42 @@ export default function Navbar() {
     );
   }
 
+	// Add dynamic background class to navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      if (aboutMeRef.current && experiencesRef.current) {
+        const aboutMeTop = aboutMeRef.current.getBoundingClientRect().top;
+        const experiencesTop = experiencesRef.current.getBoundingClientRect().top;
+
+        // If the navbar is overlapping the about me section
+        if (aboutMeTop <= 0 && aboutMeTop >= -aboutMeRef.current.getBoundingClientRect().height) {
+          setDynamicBackground(true);
+        }
+        // If the navbar is overlapping the experience section
+        else if (experiencesTop <= 0 && experiencesTop >= -experiencesRef.current.getBoundingClientRect().height) {
+          setDynamicBackground(true);
+        }
+        // If the navbar is not overlapping any section
+        else {
+          setDynamicBackground(false);
+        }
+      }
+    };
+
+		// Debounce the scroll event
+    const debouncedHandleScroll = debounce(handleScroll, 50);
+
+		// Add event listener
+    window.addEventListener("scroll", debouncedHandleScroll);
+
+    // Clean up on unmount
+    return () => {
+      window.removeEventListener("scroll", debouncedHandleScroll);
+    };
+  }, [aboutMeRef, experiencesRef]);
+
   return (
-    <div className="navbar">
+    <div className={`navbar ${dynamicBackground ? "overlaping" : ""}`.trim()}>
       <p className="logo">{`{.kb}`}</p>
       {isMobile ? <MobileMenu /> : <DesktopMenu />}
     </div>

@@ -3,7 +3,12 @@
   width: 100vw;
   height: $navbar-height;
   z-index: 10;
-  position: absolute;
+  position: fixed;
+	transition: background-color 0.3s ease-out;
+
+  &.overlaping {
+    background-color: $color-primary-dark-40;
+  }
 
   .logo {
     padding: 5px 10px;
