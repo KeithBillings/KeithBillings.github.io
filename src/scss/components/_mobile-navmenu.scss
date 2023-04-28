@@ -7,9 +7,9 @@
   right: 0;
   z-index: 10;
 
-	@include desktop {
-		display: none;
-	}
+  @include desktop {
+    display: none;
+  }
 
   .mobile-menu-items {
     padding: 3rem;
