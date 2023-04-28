@@ -12,6 +12,7 @@ import ExperiencesContext from "./context/ExperiencesContext";
 
 // Styles
 import "./scss/main.scss";
+import MobileNavMenu from "./components/MobileNavMenu/MobileNavMenu";
 
 export default function App() {
   const aboutMeRef = useRef(null);
@@ -24,6 +25,7 @@ export default function App() {
           <div className="App">
             <Router>
               <Navbar />
+							<MobileNavMenu />
               <Pages />
             </Router>
           </div>

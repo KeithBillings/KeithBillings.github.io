@@ -1,12 +1,9 @@
 import React, { useState, useContext, useEffect } from "react";
 
 // Components
-import { Link } from "react-router-dom";
-import OptionalComponent from "../OptionalComponent/OptionalComponent";
-import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
+import NavMenuLinks from "../NavMenuLinks/NavMenuLinks";
 
 // Context
-import { WindowSize } from "../../context/WindowSizeContext";
 import AboutMeContext from "../../context/AboutMeContext";
 import ExperiencesContext from "../../context/ExperiencesContext";
 
@@ -14,62 +11,11 @@ import ExperiencesContext from "../../context/ExperiencesContext";
 import debounce from "../../utils/debounce";
 
 export default function Navbar() {
-  const [mobileMenuToggle, setMobileMenuToggle] = useState(false);
   const [dynamicBackground, setDynamicBackground] = useState(false);
-
-  // Context
-  const { isDesktop } = useContext(WindowSize);
 
   const aboutMeRef = useContext(AboutMeContext);
   const experiencesRef = useContext(ExperiencesContext);
 
-  // toggle mobile menu
-  const handleMobileMenuToggle = () => {
-    setMobileMenuToggle(!mobileMenuToggle);
-  };
-
-  function NavMenuLinks() {
-    return (
-      <ul className="mobile-menu-items">
-        <li className="mobile-menu-item">
-          <Link to="/" className="mobile-menu-links">
-            Home
-          </Link>
-        </li>
-        <li className="mobile-menu-item">
-          <Link to="/about" className="mobile-menu-links">
-            About Me
-          </Link>
-        </li>
-        <li className="mobile-menu-item">
-          <Link to="/contact" className="mobile-menu-links">
-            Contact Me
-          </Link>
-        </li>
-      </ul>
-    );
-  }
-
-  function MobileMenu() {
-    return (
-      <>
-        <HamburgerMenu callback={handleMobileMenuToggle} className={"mobile-menu-icon"} activeToggle={mobileMenuToggle} />
-        <OptionalComponent condition={mobileMenuToggle}>
-          <div className="nav-menu--mobile">
-            <NavMenuLinks />
-          </div>
-        </OptionalComponent>
-      </>
-    );
-  }
-
-  function DesktopMenu() {
-    return (
-      <div className="nav-menu">
-        <NavMenuLinks />
-      </div>
-    );
-  }
 
   // Add dynamic background class to navbar
   useEffect(() => {
@@ -111,7 +57,9 @@ export default function Navbar() {
   return (
     <div className={`navbar ${dynamicBackground ? "overlaping" : ""}`.trim()}>
       <p className="logo">{`{.kb}`}</p>
-      {isDesktop ? <DesktopMenu /> : <MobileMenu />}
+      <div className="nav-menu">
+        <NavMenuLinks />
+      </div>
     </div>
   );
 }
