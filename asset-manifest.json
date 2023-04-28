@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.9562dffc.css",
-    "main.js": "/static/js/main.4df715ff.js",
+    "main.js": "/static/js/main.1b24dfdc.js",
     "static/media/portland.png": "/static/media/portland.39d0877442a711f2ee29.png",
     "static/media/keith2.png": "/static/media/keith2.1117ed94632e6fdecae9.png",
     "static/media/brandlive_logo.png": "/static/media/brandlive_logo.0ab794dc8f4d274cb2f5.png",
     "static/media/oregon_logo.png": "/static/media/oregon_logo.47035ed650291e757856.png",
     "index.html": "/index.html",
     "main.9562dffc.css.map": "/static/css/main.9562dffc.css.map",
-    "main.4df715ff.js.map": "/static/js/main.4df715ff.js.map"
+    "main.1b24dfdc.js.map": "/static/js/main.1b24dfdc.js.map"
   },
   "entrypoints": [
     "static/css/main.9562dffc.css",
-    "static/js/main.4df715ff.js"
+    "static/js/main.1b24dfdc.js"
   ]
 }
