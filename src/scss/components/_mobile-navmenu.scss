@@ -2,12 +2,24 @@
   position: fixed;
   display: flex;
   flex-direction: column;
-  width: $mobile-menu-width;
   top: 0;
   right: 0;
   z-index: 10;
+  width: 100vw;
+  height: 100vh;
+	pointer-events: none;
 
   @include desktop {
     display: none;
+  }
+
+  &__close-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: $color-primary-dark-40;
+    z-index: -1;
+    @include fadeIn(0.3s);
+		pointer-events: auto;
   }
 }

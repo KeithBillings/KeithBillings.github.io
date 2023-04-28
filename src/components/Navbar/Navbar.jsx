@@ -6,6 +6,7 @@ import NavMenuLinks from "../NavMenuLinks/NavMenuLinks";
 // Context
 import AboutMeContext from "../../context/AboutMeContext";
 import ExperiencesContext from "../../context/ExperiencesContext";
+import ContactMeContext from "../../context/ContactMeContext";
 
 // Utils
 import debounce from "../../utils/debounce";
@@ -15,7 +16,7 @@ export default function Navbar() {
 
   const aboutMeRef = useContext(AboutMeContext);
   const experiencesRef = useContext(ExperiencesContext);
-
+  const contactMeRef = useContext(ContactMeContext);
 
   // Add dynamic background class to navbar
   useEffect(() => {
@@ -37,7 +38,24 @@ export default function Navbar() {
         else {
           setDynamicBackground(false);
         }
-      } else {
+      }
+      // If the user is on the contact me page, check to add the dynamic background
+      else if (contactMeRef.current) {
+        const contactMeTop = contactMeRef.current.getBoundingClientRect().top;
+
+				console.log(contactMeTop);
+
+        // If the navbar is overlapping the contact me section
+        if (contactMeTop <= -40) {
+          setDynamicBackground(true);
+        }
+        // If the navbar is not overlapping any section
+        else {
+          setDynamicBackground(false);
+        }
+      }
+      // If the navbar is not overlapping any section
+      else {
         setDynamicBackground(false);
       }
     };
@@ -52,7 +70,7 @@ export default function Navbar() {
     return () => {
       window.removeEventListener("scroll", debouncedHandleScroll);
     };
-  }, [aboutMeRef, experiencesRef]);
+  }, [aboutMeRef, experiencesRef, contactMeRef]);
 
   return (
     <div className={`navbar ${dynamicBackground ? "overlaping" : ""}`.trim()}>

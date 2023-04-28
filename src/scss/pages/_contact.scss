@@ -21,7 +21,6 @@
   &__list {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     margin-bottom: 3rem;
 
     li {
@@ -31,6 +30,12 @@
 
     a {
       width: fit-content;
+			
+			// hiding overflow text
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-width: 100%;
     }
   }
 
@@ -46,10 +51,10 @@
         width: fit-content;
       }
 
-			&__submit-button {
-				display: flex;
-				gap: 1rem;
-			}
+      &__submit-button {
+        display: flex;
+        gap: 1rem;
+      }
     }
   }
 }

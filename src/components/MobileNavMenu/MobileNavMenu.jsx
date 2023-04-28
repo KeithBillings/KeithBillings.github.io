@@ -13,11 +13,16 @@ export default function MobileNavMenu() {
     setMobileMenuToggle(!mobileMenuToggle);
   };
 
+  const MobileNavCloseOverlay = () => {
+    return <div onClick={handleMobileMenuToggle} className="mobile-nav-menu__close-overlay"></div>;
+  };
+
   return (
     <div className="mobile-nav-menu">
       <HamburgerMenu callback={handleMobileMenuToggle} activeToggle={mobileMenuToggle} />
       <OptionalComponent condition={mobileMenuToggle}>
         <NavMenuLinks />
+        <MobileNavCloseOverlay />
       </OptionalComponent>
     </div>
   );

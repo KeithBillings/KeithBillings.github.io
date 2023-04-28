@@ -133,5 +133,6 @@ $animation-counter: 0;
       clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     }
   }
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
   animation: #{$animation-name} $time forwards;
 }

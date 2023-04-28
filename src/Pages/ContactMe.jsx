@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 // Import React Router
 import { Link } from "react-router-dom";
 
 // Import Axios
 import axios from "axios";
+
+// Import Context
+import ContactMeContext from "../context/ContactMeContext";
 
 export default function ContactMe() {
   const [name, setName] = useState("");
@@ -15,6 +18,8 @@ export default function ContactMe() {
   const [sendButton, setSendButton] = useState("Send");
   const [emailErrorMessage, setEmailErrorMessage] = useState(false);
 
+	const contactMeRef = useContext(ContactMeContext);
+	
 	const devMode = false; // Set to true to simulate successful email send
 
   const handleSubmit = async (e) => {
@@ -63,7 +68,7 @@ export default function ContactMe() {
   }, [emailSending, emailSuccess]);
 
   return (
-    <div className="contact-me">
+    <div className="contact-me" ref={contactMeRef}>
       <h1 className="contact-me__title">Contact Me</h1>
       <p className="contact-me__description">If you have any questions or would like to get in touch, please feel free to reach out through any of the following methods:</p>
       <ul className="contact-me__list">
