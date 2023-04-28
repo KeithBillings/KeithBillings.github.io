@@ -43,8 +43,6 @@ export default function Navbar() {
       else if (contactMeRef.current) {
         const contactMeTop = contactMeRef.current.getBoundingClientRect().top;
 
-				console.log(contactMeTop);
-
         // If the navbar is overlapping the contact me section
         if (contactMeTop <= -40) {
           setDynamicBackground(true);
