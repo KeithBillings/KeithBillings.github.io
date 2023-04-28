@@ -18,7 +18,7 @@ export default function Navbar() {
   const [dynamicBackground, setDynamicBackground] = useState(false);
 
   // Context
-  const { isMobile } = useContext(WindowSize);
+  const { isDesktop } = useContext(WindowSize);
 
   const aboutMeRef = useContext(AboutMeContext);
   const experiencesRef = useContext(ExperiencesContext);
@@ -111,7 +111,7 @@ export default function Navbar() {
   return (
     <div className={`navbar ${dynamicBackground ? "overlaping" : ""}`.trim()}>
       <p className="logo">{`{.kb}`}</p>
-      {isMobile ? <MobileMenu /> : <DesktopMenu />}
+      {isDesktop ? <DesktopMenu /> : <MobileMenu />}
     </div>
   );
 }
