@@ -23,6 +23,7 @@ export default function ContactMe() {
     // Check if we should simulate a successful POST request
     if (process.env.REACT_APP_SIMULATE_SUCCESS === "true") {
       setTimeout(() => {
+				console.log("Simulating successful email send.")
         setEmailSending(false);
         setEmailSuccess(true);
       }, 1000);
@@ -43,9 +44,9 @@ export default function ContactMe() {
       }
     } catch (error) {
       console.error("Error sending email:", error);
-      setEmailErrorMessage(true);
       setEmailSending(false);
       setEmailSuccess(false);
+      setEmailErrorMessage(true);
     }
   };
 
