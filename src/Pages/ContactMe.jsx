@@ -15,13 +15,15 @@ export default function ContactMe() {
   const [sendButton, setSendButton] = useState("Send");
   const [emailErrorMessage, setEmailErrorMessage] = useState(false);
 
+	const devMode = false; // Set to true to simulate successful email send
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     setEmailSending(true);
 
     // Check if we should simulate a successful POST request
-    if (process.env.REACT_APP_SIMULATE_SUCCESS === "true") {
+    if (devMode) {
       setTimeout(() => {
 				console.log("Simulating successful email send.")
         setEmailSending(false);
