@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Import React Router
 import { Link } from "react-router-dom";
@@ -10,9 +10,24 @@ export default function ContactMe() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [emailSending, setEmailSending] = useState(false);
+  const [emailSuccess, setEmailSuccess] = useState(false);
+  const [sendButton, setSendButton] = useState("Send");
+  const [emailErrorMessage, setEmailErrorMessage] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setEmailSending(true);
+
+    // Check if we should simulate a successful POST request
+    if (process.env.REACT_APP_SIMULATE_SUCCESS === "true") {
+      setTimeout(() => {
+        setEmailSending(false);
+        setEmailSuccess(true);
+      }, 1000);
+      return;
+    }
 
     try {
       const response = await axios.post("https://keithbillings-api.herokuapp.com/send-email", {
@@ -22,13 +37,27 @@ export default function ContactMe() {
       });
 
       if (response.status === 200) {
-        alert("Email sent successfully!");
+        setEmailSending(false);
+        setEmailSuccess(true);
+        setEmailErrorMessage(false);
       }
     } catch (error) {
       console.error("Error sending email:", error);
-      alert("Error sending email");
+      setEmailErrorMessage(true);
+      setEmailSending(false);
+      setEmailSuccess(false);
     }
   };
+
+  useEffect(() => {
+    if (emailSending) {
+      setSendButton("Sending...");
+    } else if (emailSuccess) {
+      setSendButton("Sent!");
+    } else {
+      setSendButton("Send");
+    }
+  }, [emailSending, emailSuccess]);
 
   return (
     <div className="contact-me">
@@ -66,7 +95,10 @@ export default function ContactMe() {
           <textarea name="message" id="message" cols="30" rows="10" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
         </div>
         <div className="contact-me__form__buttons">
-          <button type="submit">Send</button>
+          <div className="contact-me__form__buttons__submit-button">
+            <button type="submit">{sendButton}</button>
+            {emailErrorMessage && <span className="error-message">There was a problem sending the email.</span>}
+          </div>
           <Link to="/">Back to Home</Link>
         </div>
       </form>

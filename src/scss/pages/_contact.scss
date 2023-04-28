@@ -45,6 +45,11 @@
       a {
         width: fit-content;
       }
+
+			&__submit-button {
+				display: flex;
+				gap: 1rem;
+			}
     }
   }
 }
