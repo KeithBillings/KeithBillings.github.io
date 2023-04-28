@@ -21,9 +21,11 @@ body {
   cursor: default;
 }
 
-a {
+a,
+button {
   text-decoration: none;
   color: inherit;
+  background: none;
   transition: 0.3s;
 
   // animate a scrolling underline on hover
