@@ -17,9 +17,7 @@ export default function MobileNavMenu() {
     <div className="mobile-nav-menu">
       <HamburgerMenu callback={handleMobileMenuToggle} activeToggle={mobileMenuToggle} />
       <OptionalComponent condition={mobileMenuToggle}>
-        <div className="mobile-nav-menu__links">
-          <NavMenuLinks />
-        </div>
+        <NavMenuLinks />
       </OptionalComponent>
     </div>
   );
