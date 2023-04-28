@@ -71,9 +71,10 @@ export default function Navbar() {
     );
   }
 
-	// Add dynamic background class to navbar
+  // Add dynamic background class to navbar
   useEffect(() => {
     const handleScroll = () => {
+      // If the user is on the about page, check to add the dynamic background
       if (aboutMeRef.current && experiencesRef.current) {
         const aboutMeTop = aboutMeRef.current.getBoundingClientRect().top;
         const experiencesTop = experiencesRef.current.getBoundingClientRect().top;
@@ -90,13 +91,15 @@ export default function Navbar() {
         else {
           setDynamicBackground(false);
         }
+      } else {
+        setDynamicBackground(false);
       }
     };
 
-		// Debounce the scroll event
+    // Debounce the scroll event
     const debouncedHandleScroll = debounce(handleScroll, 50);
 
-		// Add event listener
+    // Add event listener
     window.addEventListener("scroll", debouncedHandleScroll);
 
     // Clean up on unmount
