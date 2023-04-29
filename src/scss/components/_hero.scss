@@ -4,7 +4,7 @@
   height: 100vh;
   background: linear-gradient(180deg, $color-primary-dark-0 0%, $color-primary-dark-50 100%);
   background-color: $color-primary;
-	position: relative;
+  position: relative;
 
   // create geometric cut out at bottom
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
@@ -85,6 +85,7 @@
     font-size: 6.8rem;
     font-family: "Cinzel Decorative";
     text-shadow: 5px 5px 10px $color-warm-black-20;
+    max-width: 95%;
 
     @include mobile() {
       font-size: 5rem;
