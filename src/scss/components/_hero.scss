@@ -85,9 +85,14 @@
     font-size: 6.8rem;
     font-family: "Cinzel Decorative";
     text-shadow: 5px 5px 10px $color-warm-black-20;
-    max-width: 95%;
+
+    @include tablet() {
+      max-width: 95%;
+      font-size: 6rem;
+    }
 
     @include mobile() {
+      max-width: 95%;
       font-size: 5rem;
     }
   }
