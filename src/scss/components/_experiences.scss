@@ -216,7 +216,7 @@
 
     &__image {
       height: 100%;
-      width: fit-content;
+			width: auto;
       filter: invert(1) grayscale(1);
     }
 
