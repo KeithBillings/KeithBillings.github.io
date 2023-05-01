@@ -1,11 +1,11 @@
 .about-me {
   padding: 3rem 10%;
+  max-width: 1440px;
   color: $color-white;
   text-align: justify;
-  max-width: 1440px;
   width: 100%;
   position: relative;
-	z-index: 1;
+  z-index: 1;
 
   ::after {
     content: "";

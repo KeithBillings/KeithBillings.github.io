@@ -6,7 +6,7 @@ export default function AboutMe() {
   const aboutMeRef = useContext(AboutMeContext);
 
   return (
-    <div className="about-me" ref={aboutMeRef}>
+    <section className="about-me" ref={aboutMeRef}>
       <h2 className="about-me__title">About Me</h2>
       <div className="about-me__description">
         <p>
@@ -19,6 +19,6 @@ export default function AboutMe() {
           cars, I am a lifelong Formula 1 fan, reading educational and fascinating books, and spending time with my family.
         </p>
       </div>
-    </div>
+    </section>
   );
 }

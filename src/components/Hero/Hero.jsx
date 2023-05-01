@@ -44,7 +44,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="hero">
+    <section className="hero">
       <div className="hero__container">
         <div className="hero__text">
           <h1 className="hero__greeting" ref={greeting}>
@@ -62,6 +62,6 @@ export default function Hero() {
       <div className="hero__background-image">
         <img src={PortlandMap} alt="Portland Map" loading="lazy" />
       </div>
-    </div>
+    </section>
   );
 }

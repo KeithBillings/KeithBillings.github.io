@@ -1,8 +1,61 @@
 .companies {
+  width: 100%;
+  padding: 3rem 10%;
+  max-width: 1440px;
+
   &__title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
   }
+
   &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
-  &__logo {
+
+  &__item {
+    flex: 0 0 calc((100% - 6rem) / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3;
+
+    // &:hover {
+    // 	filter: drop-shadow(0 0 0.5rem $color-primary-light-20);
+    // }
+
+    @include tablet() {
+      flex: 0 0 calc((100% - 3rem) / 4);
+    }
+
+    @include mobile() {
+      flex: 0 0 calc((100% - 2rem) / 3);
+    }
+
+    &__logo {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      transition: all 0.3s ease;
+      background-color: $color-primary-light;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+
+      // &:hover {
+      //   transform: scale(1.1);
+      // }
+
+      &__image {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        filter: grayscale(100%);
+        opacity: 0.4;
+      }
+    }
   }
 }
