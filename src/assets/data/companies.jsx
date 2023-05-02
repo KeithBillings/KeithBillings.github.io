@@ -12,6 +12,9 @@ import condeNastLogo from "../svgs/conde-nast-logo.svg";
 import deloitteLogo from "../svgs/deloitte-logo.svg";
 import doTerraLogo from "../svgs/doterra-logo.svg";
 import dowJonesLogo from "../svgs/dow-jones-logo.svg";
+import googleLogo from "../svgs/google-logo.svg";
+import hyundaiLogo from "../svgs/hyundai-logo.svg";
+import nmaiLogo from "../images/national-museum-of-the-american-indian-logo.png";
 
 export const companies = [
   {
@@ -71,16 +74,16 @@ export const companies = [
     logo: dowJonesLogo,
   },
   {
-    name: "Company 15",
-    logo: "",
+    name: "Google",
+    logo: googleLogo,
   },
   {
-    name: "Company 16",
-    logo: "",
+    name: "Hyundai",
+    logo: hyundaiLogo,
   },
   {
-    name: "Company 17",
-    logo: "",
+    name: "National Museum of the American Indian",
+    logo: nmaiLogo,
   },
   {
     name: "Company 18",
