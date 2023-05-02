@@ -1,17 +1,45 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6313292.css",
-    "main.js": "/static/js/main.e33df15c.js",
+    "main.css": "/static/css/main.0172596b.css",
+    "main.js": "/static/js/main.6109d517.js",
     "static/media/portland.png": "/static/media/portland.39d0877442a711f2ee29.png",
     "static/media/keith2.png": "/static/media/keith2.1117ed94632e6fdecae9.png",
     "static/media/brandlive_logo.png": "/static/media/brandlive_logo.0ab794dc8f4d274cb2f5.png",
+    "static/media/dow-jones-logo.svg": "/static/media/dow-jones-logo.9e0b8746ecacec3746ee9bc93c8efa00.svg",
     "static/media/oregon_logo.png": "/static/media/oregon_logo.47035ed650291e757856.png",
+    "static/media/vs-pink-logo.png": "/static/media/vs-pink-logo.35a8514f871af5188f8c.png",
+    "static/media/block-logo.png": "/static/media/block-logo.45f5cb11c28eb27c6a94.png",
+    "static/media/the-b-word-logo.svg": "/static/media/the-b-word-logo.7ee349e1905f9b12cc6fbf43637a03ae.svg",
+    "static/media/usana-logo.svg": "/static/media/usana-logo.cdef080e18b31c6ce4a4da787ad3d398.svg",
+    "static/media/wsj-logo.svg": "/static/media/wsj-logo.f05b6cec0323a6c8c534e0660e96d207.svg",
+    "static/media/national-museum-of-the-american-indian-logo.png": "/static/media/national-museum-of-the-american-indian-logo.cf58f12e94d353a91d81.png",
+    "static/media/pluralsight-logo.svg": "/static/media/pluralsight-logo.60ff135605cb837722f9b5da0f9fd0d9.svg",
+    "static/media/vans-logo.svg": "/static/media/vans-logo.d528e2b3bafaf58de7fd303129aa17da.svg",
+    "static/media/youtube-logo.svg": "/static/media/youtube-logo.39a29ffe308d96fa6e1dcd776f6262c1.svg",
+    "static/media/deloitte-logo.svg": "/static/media/deloitte-logo.f61f8454b573c698b1e46e8666b9392d.svg",
+    "static/media/adidas-logo.svg": "/static/media/adidas-logo.176009e6f9075f149ca99a218c812b11.svg",
+    "static/media/columbia-logo.svg": "/static/media/columbia-logo.990ba4b65908e0eb980eb2864015924e.svg",
+    "static/media/biden-campaign-logo.svg": "/static/media/biden-campaign-logo.2e83b6b9c48496830521872416fe36d2.svg",
+    "static/media/clickup-logo.svg": "/static/media/clickup-logo.bb48e985bae211e1784bfd448d25a446.svg",
+    "static/media/aarp-logo.svg": "/static/media/aarp-logo.91b58bc8ca841cb3c15630e88595952f.svg",
+    "static/media/asana-logo.svg": "/static/media/asana-logo.d87ad5f184be20bb2c22f9bbbcd8f8ab.svg",
+    "static/media/north-face-logo.svg": "/static/media/north-face-logo.b31c1e10b12cda4180d3be9a7ae824c6.svg",
+    "static/media/ark-investments-logo.svg": "/static/media/ark-investments-logo.508d0cd5478034f80f0430b1b8783116.svg",
+    "static/media/clarivate-logo.svg": "/static/media/clarivate-logo.0790013965f55a573fa3c9e131010be4.svg",
+    "static/media/hyundai-logo.svg": "/static/media/hyundai-logo.b0e285bd18527e1e98c0efaca4081186.svg",
+    "static/media/nintendo-logo.svg": "/static/media/nintendo-logo.b502410d177d3e2ed69bd488d8c9bffe.svg",
+    "static/media/public-logo.svg": "/static/media/public-logo.def6d9938efc95a2b2f5d1c4d1b96b61.svg",
+    "static/media/conde-nast-logo.svg": "/static/media/conde-nast-logo.6191d483508665631076972829b75759.svg",
+    "static/media/npr-logo.svg": "/static/media/npr-logo.74ccec0b1bd8ba19ef4df7c4218276bd.svg",
+    "static/media/wired-logo.svg": "/static/media/wired-logo.a54631d46f88a1f5dfeaa1aa2982bdec.svg",
+    "static/media/google-logo.svg": "/static/media/google-logo.bf1926217a650957672ef737dc3d8c25.svg",
+    "static/media/nike-logo.svg": "/static/media/nike-logo.26c0a26125177627922b7e7e15365b43.svg",
     "index.html": "/index.html",
-    "main.e6313292.css.map": "/static/css/main.e6313292.css.map",
-    "main.e33df15c.js.map": "/static/js/main.e33df15c.js.map"
+    "main.0172596b.css.map": "/static/css/main.0172596b.css.map",
+    "main.6109d517.js.map": "/static/js/main.6109d517.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6313292.css",
-    "static/js/main.e33df15c.js"
+    "static/css/main.0172596b.css",
+    "static/js/main.6109d517.js"
   ]
 }
