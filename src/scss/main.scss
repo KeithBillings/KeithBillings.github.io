@@ -1,11 +1,12 @@
-// Base
-@import "./base/variables";
+// Imports
+@import "./utilities/variables";
 @import "./colors/colors";
 @import "./typography/typography";
-@import "./base/base";
-
-// Mixins
 @import "./mixins/mixins";
+@import "./utilities/utilities";
+
+// Base
+@import "./base/base";
 
 // Pages
 @import "./pages/pages";

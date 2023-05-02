@@ -136,3 +136,40 @@ $animation-counter: 0;
   clip-path: polygon(0 0, 0 0, 0 0, 0 0);
   animation: #{$animation-name} $time forwards;
 }
+
+
+// Bounce Right
+@mixin bounceRight($time) {
+	$animation-counter: $animation-counter + 1 !global;
+	$animation-name: "bounceRight-#{$animation-counter}";
+	@keyframes #{$animation-name} {
+		0% {
+			transform: translateX(0);
+		}
+		50% {
+			transform: translateX(1rem);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+	animation: #{$animation-name} $time forwards;
+}
+
+// Bounce Left
+@mixin bounceLeft($time) {
+	$animation-counter: $animation-counter + 1 !global;
+	$animation-name: "bounceLeft-#{$animation-counter}";
+	@keyframes #{$animation-name} {
+		0% {
+			transform: translateX(0);
+		}
+		50% {
+			transform: translateX(-1rem);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+	animation: #{$animation-name} $time forwards;
+}

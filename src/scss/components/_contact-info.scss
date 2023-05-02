@@ -1,0 +1,96 @@
+.contact-info {
+  background-color: $color-primary;
+  padding: 3rem 10%;
+  max-width: 1440px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  // Add responsive styles for smaller devices
+  @include tablet() {
+    padding: 2rem 5%;
+  }
+
+  @include mobile() {
+    padding: 1rem 2%;
+  }
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    @include tablet() {
+      grid-template-columns: 1fr;
+    }
+
+    @include mobile() {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__description {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+
+		@include tablet() {
+			text-align: left;
+		}
+		@include mobile() {
+			text-align: left;
+		}
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    li {
+      display: flex;
+      gap: 1rem;
+    }
+
+    a {
+      width: fit-content;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-left: auto;
+
+    &:hover {
+      svg {
+        @include bounceRight(1s);
+      }
+    }
+
+		@include tablet() {
+			margin-left: 0;
+		}
+		@include mobile() {
+			margin-left: 0;
+		}
+
+    a {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      margin-left: auto;
+    }
+
+    svg {
+      margin-left: 0.5rem;
+      margin-bottom: 0.2rem;
+    }
+  }
+}

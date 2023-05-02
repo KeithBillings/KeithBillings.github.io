@@ -6,6 +6,7 @@ import Hero from "../components/Hero/Hero";
 import Skills from "../components/Skills/Skills";
 import Experiences from "../components/Experiences/Experiences";
 import Companies from "../components/Companies/Companies";
+import ContactInfo from "../components/ContactInfo/ContactInfo";
 
 export default function Home(props) {
   // Props
@@ -28,6 +29,7 @@ export default function Home(props) {
       <Skills />
       <Experiences />
       <Companies />
+			<ContactInfo />
     </div>
   );
 }

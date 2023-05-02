@@ -3,6 +3,15 @@
   padding: 3rem 10%;
   max-width: 1440px;
 
+  // Add responsive styles for smaller devices
+  @include tablet() {
+    padding: 2rem 5%;
+  }
+
+  @include mobile() {
+    padding: 1rem 2%;
+  }
+
   &__title {
     font-size: 3rem;
     margin-bottom: 3rem;
