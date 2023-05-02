@@ -23,10 +23,6 @@
     align-items: center;
     transition: all 0.3;
 
-    // &:hover {
-    // 	filter: drop-shadow(0 0 0.5rem $color-primary-light-20);
-    // }
-
     @include tablet() {
       flex: 0 0 calc((100% - 3rem) / 4);
     }
@@ -44,10 +40,6 @@
       mask-repeat: no-repeat;
       mask-position: center;
       mask-size: contain;
-
-      // &:hover {
-      //   transform: scale(1.1);
-      // }
 
       &__image {
         width: 100%;
