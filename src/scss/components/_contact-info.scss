@@ -1,10 +1,21 @@
 .contact-info {
-  background-color: $color-primary;
   padding: 3rem 10%;
   max-width: 1440px;
   width: 100%;
   position: relative;
   z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $color-primary;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+  }
 
   // Add responsive styles for smaller devices
   @include tablet() {
@@ -39,12 +50,12 @@
     margin-bottom: 3rem;
     font-size: 1.5rem;
 
-		@include tablet() {
-			text-align: left;
-		}
-		@include mobile() {
-			text-align: left;
-		}
+    @include tablet() {
+      text-align: left;
+    }
+    @include mobile() {
+      text-align: left;
+    }
   }
 
   &__list {
@@ -74,12 +85,12 @@
       }
     }
 
-		@include tablet() {
-			margin-left: 0;
-		}
-		@include mobile() {
-			margin-left: 0;
-		}
+    @include tablet() {
+      margin-left: 0;
+    }
+    @include mobile() {
+      margin-left: 0;
+    }
 
     a {
       display: flex;

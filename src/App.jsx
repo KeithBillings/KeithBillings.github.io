@@ -1,15 +1,16 @@
 import React, { useRef } from "react";
 
-// Components
-import { BrowserRouter as Router } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Pages from "./Pages/Pages";
-
 // Context
 import WindowSizeProvider from "./context/WindowSizeContext";
 import AboutMeContext from "./context/AboutMeContext";
 import ExperiencesContext from "./context/ExperiencesContext";
 import ContactMeContext from "./context/ContactMeContext";
+
+// Components
+import { BrowserRouter as Router } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Pages from "./Pages/Pages";
+import Footer from "./components/Footer/Footer";
 
 // Styles
 import "./scss/main.scss";
@@ -30,6 +31,7 @@ export default function App() {
                 <Navbar />
                 <MobileNavMenu />
                 <Pages />
+                <Footer />
               </Router>
             </div>
           </ContactMeContext.Provider>

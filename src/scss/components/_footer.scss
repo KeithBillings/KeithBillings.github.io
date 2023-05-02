@@ -1,0 +1,16 @@
+.footer {
+  color: $color-warm-white;
+  padding: 2rem 10%;
+  width: 100%;
+  background-color: $color-primary-dark-80;
+
+  &__content {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+// When on the home page, make it fully dark to match the rest of the styles
+.home + .footer {
+  background-color: $color-primary-dark;
+}
