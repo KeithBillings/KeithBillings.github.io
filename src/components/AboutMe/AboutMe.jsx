@@ -15,8 +15,8 @@ export default function AboutMe() {
         </p>
         <p>
           Outside of my professional pursuits, I am dedicated to personal growth and assisting others in reaching their full potential. With a positive attitude and strong leadership skills, I am committed to cultivating a collaborative and inclusive
-          environment for both my colleagues and clients. My genuine interest in staying updated with the latest advancements in web development ensures that I am always equipped to provide the best solutions. In my free time, I am obsessed with
-          cars, I am a lifelong Formula 1 fan, reading educational and fascinating books, and spending time with my family.
+          environment for both my colleagues and clients. My genuine interest in staying updated with the latest advancements in web development ensures that I am always equipped to provide the best solutions. In my free time I enjoy reading
+          educational and fascinating books, and spending time with my family. I am also obsessed with cars, and a lifelong Formula 1 fan.
         </p>
       </div>
     </section>

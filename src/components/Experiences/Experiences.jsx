@@ -19,14 +19,14 @@ export default function Experiences() {
   const experienceList = [
     {
       title: "Web Developer",
-      description: "I am currently working as a Web Developer at a startup called Brandlive. I am working on the custom dev team, and I am responsible for building and maintaining the frontend features and events.",
+      description: "I am currently working as a Web Developer at a startup called Brandlive. I am working on the custom dev team, and I am responsible for building and maintaining the front-end features and events.",
       fullDescription:
-        "I am currently working as a Web Developer at a startup called Brandlive. I am working on the custom dev team, and I am responsible for building and maintaining the frontend features and events. Front end specialist. Part of the custom development team, and one of the platform dev teams. Creates new features, fixes UI bugs, and builds entire custom events. Works on the streaming platform, integrates metrics, APIs, widgets, custom components, and more. Work has been seen by millions across the globe. Currently in a leadership position, leads projects, teaches, and reviews code, along with normal day to day duties.",
+        "I am currently working as a Web Developer at a startup called Brandlive. I am working on the custom dev team, and I am responsible for building and maintaining the front-end features and events. Front-end specialist. Part of the custom development team, and one of the platform dev teams. Creates new features, fixes UI bugs, and builds entire custom events. Works on the streaming platform, integrates metrics, APIs, widgets, custom components, and more. Work has been seen by millions across the globe. Currently in a leadership position, leads projects, teaches, and reviews code, along with normal day to day duties.",
       image: brandlive,
     },
     {
       title: "School",
-      description: "I am attended Universiy of Oregon Coding Bootcamp. I learned the MERN stack and other web technologies.",
+      description: "I attended University of Oregon Coding Bootcamp. I learned the MERN stack and other web technologies.",
       fullDescription:
         "During my time at the University of Oregon Coding Bootcamp, I received comprehensive training in Full Stack Web Development, specializing in the MERN stack (MongoDB, Express, React, and Node.js). In addition to core technologies, I gained experience with supplemental tools such as HTML, SCSS, JavaScript, and TypeScript. Through a series of hands-on projects, I developed strong problem-solving skills, honed my ability to work effectively with a team, and learned how to plan sprints, use Jira and Figma, and maintain clear communication. Upon completion of the program, I was awarded a certificate, which recognized my proficiency in Full Stack Web Development and prepared me for a successful career in the industry.",
       image: oregonLogo,
