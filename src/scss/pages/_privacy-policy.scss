@@ -1,0 +1,36 @@
+.privacy-policy {
+  padding: 5rem 10% 3rem;
+  color: #ffffff;
+  text-align: justify;
+  max-width: 1440px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+  // Add responsive styles for smaller devices
+  @include tablet() {
+    padding: 5rem 5% 2rem;
+  }
+
+  @include mobile() {
+    padding: 5rem 2% 1rem;
+  }
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__link {
+    display: inline-flex;
+  }
+}

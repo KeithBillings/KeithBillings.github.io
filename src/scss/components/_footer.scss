@@ -7,6 +7,18 @@
   &__content {
     text-align: center;
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__privacy-policy {
+    width: fit-content;
+    margin: auto;
+
+    &::after {
+      height: 1px;
+    }
   }
 }
 
