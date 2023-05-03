@@ -54,7 +54,7 @@ export default function Experiences() {
         {experienceList.map((experience, index) => (
           <div key={index} className="experience__item">
             <div className="experience__image-wrapper">
-              <img src={experience.image} alt={experience.title} className="experience__image" />
+              <img src={experience.image} alt={experience.title} className="experience__image" loading="lazy" />
             </div>
             <div className="experience__content">
               <h3 className="experience__title">{experience.title}</h3>
@@ -74,7 +74,7 @@ export default function Experiences() {
           </button>
           <div className="experience__overlay__content">
             <div className="experience__overlay__header">
-              <img src={experienceList[activeExperience].image} alt={experienceList[activeExperience].title} className="experience__overlay__image" />
+              <img src={experienceList[activeExperience].image} alt={experienceList[activeExperience].title} className="experience__overlay__image" loading="lazy" />
               <h3 className="experience__overlay__title">{experienceList[activeExperience].title}</h3>
             </div>
             <p className="experience__overlay__description">{experienceList[activeExperience].fullDescription}</p>

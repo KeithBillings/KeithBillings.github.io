@@ -60,7 +60,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="hero__background-image">
-        <img src={PortlandMap} alt="Portland Map" loading="lazy" />
+        <img src={PortlandMap} alt="Portland Map" />
       </div>
     </section>
   );
