@@ -175,7 +175,8 @@
     // if pathname is contact, set contact in local storage
     const path = window.location.pathname;
     if (path === "/contact" || path === "/about" || path === "/privacy-policy") {
-      localStorage.setItem("kb-localdata", { route: path });
+      const localData = JSON.stringify({ route: path });
+      localStorage.setItem("kb-localdata", localData);
       window.location.href = "/";
     }
   </script>
