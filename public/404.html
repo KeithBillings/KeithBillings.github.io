@@ -171,4 +171,12 @@
       </p>
     </div>
   </body>
+  <script>
+    // if pathname is contact, set contact in local storage
+    const path = window.location.pathname;
+    if (path === "/contact" || path === "/about" || path === "/privacy-policy") {
+      localStorage.setItem("kb-localdata", { route: path });
+      window.location.href = "/";
+    }
+  </script>
 </html>
