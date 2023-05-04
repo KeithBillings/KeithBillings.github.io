@@ -176,7 +176,7 @@
     const path = window.location.pathname;
     if (path === "/contact" || path === "/about" || path === "/privacy-policy") {
       const localData = JSON.stringify({ route: path });
-      localStorage.setItem("kb-localdata", localData);
+      localStorage.setItem("kb-localData", localData);
       window.location.href = "/";
     }
   </script>
