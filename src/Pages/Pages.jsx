@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route, useHistory } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 // pages
 import Home from "./Home";
@@ -12,14 +12,19 @@ export default function Pages() {
   const localDataParsed = JSON.parse(localData);
   const localDataParsedRoute = localDataParsed?.route;
 
-  // useHistory hook
-  const history = useHistory();
+  // useNavigate hook
+  const navigate = useNavigate();
 
-  // if localDataParsedRoute is not null, redirect to the route
-  if (localDataParsedRoute) {
-    // redirect to the route
-    history.push(localDataParsedRoute);
-  }
+  useEffect(() => {
+    // if localDataParsedRoute is not null, redirect to the route
+    if (localDataParsedRoute) {
+      // clear local storage
+      localStorage.removeItem("kb-localData");
+
+      // redirect to the route
+      navigate(localDataParsedRoute);
+    }
+  }, [localDataParsedRoute, navigate]);
 
   return (
     <Routes>
