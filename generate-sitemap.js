@@ -1,4 +1,4 @@
-const { SitemapStream, streamToPromise } = require('sitemap');
+const { SitemapStream } = require('sitemap');
 const { createWriteStream } = require('fs');
 const { resolve } = require('path');
 
@@ -11,6 +11,7 @@ sitemap.pipe(writeStream);
 sitemap.write({ url: '/', changefreq: 'monthly', priority: 1 });
 sitemap.write({ url: '/contact', changefreq: 'yearly', priority: 0.7 });
 
-streamToPromise(writeStream).then(() => console.log('Sitemap created.'));
+// Listen for the 'finish' event on writeStream
+writeStream.on('finish', () => console.log('Sitemap created.'));
 
 sitemap.end();
