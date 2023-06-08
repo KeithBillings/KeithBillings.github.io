@@ -11,6 +11,6 @@ sitemap.pipe(writeStream);
 sitemap.write({ url: '/', changefreq: 'monthly', priority: 1 });
 sitemap.write({ url: '/contact', changefreq: 'yearly', priority: 0.7 });
 
-sitemap.end();
-
 streamToPromise(writeStream).then(() => console.log('Sitemap created.'));
+
+sitemap.end();
