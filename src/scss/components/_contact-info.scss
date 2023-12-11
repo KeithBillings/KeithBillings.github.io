@@ -6,7 +6,7 @@
   z-index: 1;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     background-color: $color-primary;
     top: 0;
@@ -19,11 +19,11 @@
 
   // Add responsive styles for smaller devices
   @include tablet() {
-    padding: 2rem 5%;
+    padding: 2rem 50px;
   }
 
   @include mobile() {
-    padding: 1rem 2%;
+    padding: 1rem 30px;
   }
 
   &__title {
@@ -43,6 +43,10 @@
     @include mobile() {
       grid-template-columns: 1fr;
       gap: 2rem;
+    }
+
+    &__item {
+      max-width: 100%;
     }
   }
 
