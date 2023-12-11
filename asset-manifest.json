@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.085a78f2.css",
-    "main.js": "/static/js/main.80834ecf.js",
+    "main.css": "/static/css/main.0c97cc91.css",
+    "main.js": "/static/js/main.0caf8535.js",
     "static/media/portland.png": "/static/media/portland.39d0877442a711f2ee29.png",
     "static/media/keith2.png": "/static/media/keith2.1117ed94632e6fdecae9.png",
     "static/media/brandlive_logo.png": "/static/media/brandlive_logo.0ab794dc8f4d274cb2f5.png",
@@ -30,16 +30,16 @@
     "static/media/nintendo-logo.svg": "/static/media/nintendo-logo.b502410d177d3e2ed69bd488d8c9bffe.svg",
     "static/media/public-logo.svg": "/static/media/public-logo.def6d9938efc95a2b2f5d1c4d1b96b61.svg",
     "static/media/conde-nast-logo.svg": "/static/media/conde-nast-logo.6191d483508665631076972829b75759.svg",
+    "index.html": "/index.html",
     "static/media/npr-logo.svg": "/static/media/npr-logo.74ccec0b1bd8ba19ef4df7c4218276bd.svg",
     "static/media/wired-logo.svg": "/static/media/wired-logo.a54631d46f88a1f5dfeaa1aa2982bdec.svg",
     "static/media/google-logo.svg": "/static/media/google-logo.bf1926217a650957672ef737dc3d8c25.svg",
-    "index.html": "/index.html",
     "static/media/nike-logo.svg": "/static/media/nike-logo.26c0a26125177627922b7e7e15365b43.svg",
-    "main.085a78f2.css.map": "/static/css/main.085a78f2.css.map",
-    "main.80834ecf.js.map": "/static/js/main.80834ecf.js.map"
+    "main.0c97cc91.css.map": "/static/css/main.0c97cc91.css.map",
+    "main.0caf8535.js.map": "/static/js/main.0caf8535.js.map"
   },
   "entrypoints": [
-    "static/css/main.085a78f2.css",
-    "static/js/main.80834ecf.js"
+    "static/css/main.0c97cc91.css",
+    "static/js/main.0caf8535.js"
   ]
 }
