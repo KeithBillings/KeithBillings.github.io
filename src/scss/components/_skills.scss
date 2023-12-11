@@ -5,11 +5,11 @@
 
   // Add responsive styles for smaller devices
   @include tablet() {
-    padding: 2rem 5%;
+    padding: 2rem 50px;
   }
 
   @include mobile() {
-    padding: 1rem 2%;
+    padding: 1rem 30px;
   }
 
   &__title {
@@ -67,7 +67,7 @@
 
     span {
       &::after {
-        content: "";
+        content: '';
         display: block;
         width: 0;
         height: 2px;
