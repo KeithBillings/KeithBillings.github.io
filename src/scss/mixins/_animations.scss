@@ -4,7 +4,7 @@ $animation-counter: 0;
 // Slide left mixin
 @mixin slideLeft($value, $time) {
   $animation-counter: $animation-counter + 1 !global;
-  $animation-name: "slideLeft-#{$animation-counter}";
+  $animation-name: 'slideLeft-#{$animation-counter}';
   @keyframes #{$animation-name} {
     0% {
       right: $value;
@@ -19,7 +19,7 @@ $animation-counter: 0;
 // Slide right mixin
 @mixin slideRight($value, $time) {
   $animation-counter: $animation-counter + 1 !global;
-  $animation-name: "slideRight-#{$animation-counter}";
+  $animation-name: 'slideRight-#{$animation-counter}';
   @keyframes #{$animation-name} {
     0% {
       right: 0;
@@ -34,7 +34,7 @@ $animation-counter: 0;
 // Slide up mixin
 @mixin slideUp($value, $time) {
   $animation-counter: $animation-counter + 1 !global;
-  $animation-name: "slideUp-#{$animation-counter}";
+  $animation-name: 'slideUp-#{$animation-counter}';
   @keyframes #{$animation-name} {
     0% {
       bottom: $value;
@@ -49,7 +49,7 @@ $animation-counter: 0;
 // Slide down mixin
 @mixin slideDown($value, $time) {
   $animation-counter: $animation-counter + 1 !global;
-  $animation-name: "slideDown-#{$animation-counter}";
+  $animation-name: 'slideDown-#{$animation-counter}';
   @keyframes #{$animation-name} {
     0% {
       bottom: 0;
@@ -64,7 +64,7 @@ $animation-counter: 0;
 // Fade in mixin
 @mixin fadeIn($time) {
   $animation-counter: $animation-counter + 1 !global;
-  $animation-name: "fadeIn-#{$animation-counter}";
+  $animation-name: 'fadeIn-#{$animation-counter}';
   @keyframes #{$animation-name} {
     0% {
       opacity: 0;
@@ -79,7 +79,7 @@ $animation-counter: 0;
 // Fade out mixin
 @mixin fadeOut($time) {
   $animation-counter: $animation-counter + 1 !global;
-  $animation-name: "fadeOut-#{$animation-counter}";
+  $animation-name: 'fadeOut-#{$animation-counter}';
   @keyframes #{$animation-name} {
     0% {
       opacity: 1;
@@ -94,7 +94,7 @@ $animation-counter: 0;
 // Wipe top left mixin
 @mixin wipeTopLeft($time) {
   $animation-counter: $animation-counter + 1 !global;
-  $animation-name: "wipeTopLeft-#{$animation-counter}";
+  $animation-name: 'wipeTopLeft-#{$animation-counter}';
   @keyframes #{$animation-name} {
     0% {
       clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
@@ -109,7 +109,7 @@ $animation-counter: 0;
 // Wipe top left mixin - no clip-path cut out
 @mixin wipeTopLeftFull($time) {
   $animation-counter: $animation-counter + 1 !global;
-  $animation-name: "wipeTopLeft-#{$animation-counter}";
+  $animation-name: 'wipeTopLeft-#{$animation-counter}';
   @keyframes #{$animation-name} {
     0% {
       clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
@@ -124,7 +124,7 @@ $animation-counter: 0;
 // Wipe top right mixin
 @mixin wipeTopRight($time) {
   $animation-counter: $animation-counter + 1 !global;
-  $animation-name: "wipeTopRight-#{$animation-counter}";
+  $animation-name: 'wipeTopRight-#{$animation-counter}';
   @keyframes #{$animation-name} {
     0% {
       clip-path: polygon(100% 0, 100% 0, 100% 80%, 100% 80%);
@@ -140,7 +140,7 @@ $animation-counter: 0;
 // Bounce Right
 @mixin bounceRight($time) {
   $animation-counter: $animation-counter + 1 !global;
-  $animation-name: "bounceRight-#{$animation-counter}";
+  $animation-name: 'bounceRight-#{$animation-counter}';
   @keyframes #{$animation-name} {
     0% {
       transform: translateX(0);
@@ -158,7 +158,7 @@ $animation-counter: 0;
 // Bounce Left
 @mixin bounceLeft($time) {
   $animation-counter: $animation-counter + 1 !global;
-  $animation-name: "bounceLeft-#{$animation-counter}";
+  $animation-name: 'bounceLeft-#{$animation-counter}';
   @keyframes #{$animation-name} {
     0% {
       transform: translateX(0);
@@ -176,7 +176,7 @@ $animation-counter: 0;
 // combination of slideLeft and fadeIn
 @mixin slideLeftFadeIn($value, $time) {
   $animation-counter: $animation-counter + 1 !global;
-  $animation-name: "slideLeftFadeIn-#{$animation-counter}";
+  $animation-name: 'slideLeftFadeIn-#{$animation-counter}';
   @keyframes #{$animation-name} {
     0% {
       right: $value;
