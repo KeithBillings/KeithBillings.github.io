@@ -13,66 +13,83 @@ function Skills() {
 
   const { isMobile } = useContext(WindowSize);
 
+  // calculate helper function
+  function calculateYearsDiff(date) {
+    // input the start date
+    const startDate = new Date(date);
+
+    // get the current date
+    const currentDate = new Date();
+
+    // get the difference between the dates
+    const difference = currentDate.getTime() - startDate.getTime();
+
+    // calculate the time in years, rounding
+    const years = Math.round(difference / (1000 * 60 * 60 * 24 * 365));
+
+		return years;
+  }
+
   const skillsList = [
     {
       name: "React",
       icon: <FaReact />,
-      description: "4 years experience",
+      description: `${calculateYearsDiff("October 2020")} years experience`,
     },
     {
       name: "Javascript",
       icon: <IoLogoJavascript />,
-      description: "4 years experience",
+      description: `${calculateYearsDiff("October 2020")} years experience`,
     },
     {
       name: "CSS/SCSS",
       icon: <IoLogoSass />,
-      description: "4 years experience",
+      description: `${calculateYearsDiff("October 2020")} years experience`,
     },
     {
       name: "NodeJS",
       icon: <FaNode />,
-      description: "3 years experience",
+      description: `${calculateYearsDiff("October 2020")} years experience`,
     },
     {
       name: "Figma",
       icon: <FaFigma />,
-      description: "2 years experience",
+      description: `${calculateYearsDiff("March 2021")} years experience`,
     },
     {
       name: "NextJS",
       icon: <SiNextdotjs />,
-      description: "2 years experience",
+      description: `${calculateYearsDiff("Jan 29, 2021")} years experience`,
     },
     {
       name: "Github/Git",
       icon: <FaGithub />,
-      description: "4 years experience",
+      description: `${calculateYearsDiff("October 2020")} years experience`,
     },
     {
       name: "Typescript",
       icon: <TbBrandTypescript />,
-      description: "2 years experience",
+      description: `${calculateYearsDiff("March 2021")} years experience`,
     },
     {
       name: "MongoDB",
       icon: <SiMongodb />,
-      description: "1 years experience",
+      description: "1 years experience", // I started learning but stopped
     },
     {
       name: "HTML",
       icon: <FaHtml5 />,
-      description: "4 years experience",
+      description: `${calculateYearsDiff("October 2020")} years experience`,
     },
     {
       name: "Jira",
       icon: <SiJira />,
-      description: "2 years experience",
+      description: `${calculateYearsDiff("March 2021")} years experience`,
     },
     {
       name: "Python",
       icon: <FaPython />,
-      description: ">1 years experience. Just started learning!",
+      description: "1 years experience",
     },
   ];
 
