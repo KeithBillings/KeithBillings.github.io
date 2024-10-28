@@ -1,18 +1,12 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import { FaReact, FaNode, FaFigma, FaGithub, FaHtml5, FaPython } from "react-icons/fa";
 import { IoLogoJavascript, IoLogoSass } from "react-icons/io";
 import { SiNextdotjs, SiMongodb, SiJira } from "react-icons/si";
 import { TbBrandTypescript } from "react-icons/tb";
 
 // Context
-import { WindowSize } from "../../context/WindowSizeContext";
-import OptionalComponent from "../OptionalComponent/OptionalComponent";
 
 function Skills() {
-  const [showAllSkills, setShowAllSkills] = useState(false);
-
-  const { isMobile } = useContext(WindowSize);
-
   // calculate helper function
   function calculateYearsDiff(date) {
     // input the start date
@@ -27,7 +21,7 @@ function Skills() {
     // calculate the time in years, rounding
     const years = Math.round(difference / (1000 * 60 * 60 * 24 * 365));
 
-		return years;
+    return years;
   }
 
   const skillsList = [
@@ -96,22 +90,15 @@ function Skills() {
   return (
     <section className="skills">
       <h2 className="skills__title">Skills</h2>
-      <div className="skills__grid">
-        {skillsList.slice(0, isMobile ? (showAllSkills ? skillsList.length : 5) : skillsList.length).map((skill, index) => (
-          <div key={index} className="skills__card">
+      <div className="skills__list">
+        {skillsList.map((skill, index) => (
+          <div key={index} className="skills__item">
             <div className="skills__icon">{skill.icon}</div>
-            <div className={`skills__overlay ${index % 2 ? "left" : "right"}`.trim()}>
-              <p className="skills__name">{skill.name}</p>
-              <p className="skills__description">{skill.description}</p>
-            </div>
+            <p className="skills__name">{skill.name}</p>
+            <p className="skills__description">{skill.description}</p>
           </div>
         ))}
       </div>
-      <OptionalComponent condition={isMobile}>
-        <button className="skills__button" onClick={() => setShowAllSkills(!showAllSkills)}>
-          <span>{showAllSkills ? "Show Less" : "Show More"}</span>
-        </button>
-      </OptionalComponent>
     </section>
   );
 }
