@@ -55,7 +55,7 @@ export default function Experiences() {
 
   return (
     <section className="experiences">
-      <h2 className="experiences__title">My Experience and Education</h2>
+      <h2 className="experiences__title">{"{Experience_and_Education}"}</h2>
       <div className="experiences__container">
         {/* Experience Cards */}
         {experienceList.map((experience, index) => (

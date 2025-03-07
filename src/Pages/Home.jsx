@@ -25,8 +25,10 @@ export default function Home(props) {
   return (
     <div className="home">
       <Hero />
-      <AboutMe />
-      <Skills />
+      <div className="about-and-skills">
+        <AboutMe />
+        <Skills />
+      </div>
       <Experiences />
       <Companies />
       <ContactInfo />

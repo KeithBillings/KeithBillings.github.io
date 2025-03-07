@@ -2,6 +2,8 @@
   width: 100%;
   padding: 3rem 10%;
   max-width: 1440px;
+  color: $color-warm-white;
+  position: relative;
 
   // Add responsive styles for smaller devices
   @include tablet() {
@@ -15,6 +17,7 @@
   &__title {
     font-size: 3rem;
     margin-bottom: 3rem;
+    text-align: center;
   }
 
   &__container {

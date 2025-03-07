@@ -89,7 +89,7 @@ function Skills() {
 
   return (
     <section className="skills">
-      <h2 className="skills__title">Skills</h2>
+      <h2 className="skills__title">{"{Skills}"}</h2>
       <div className="skills__list">
         {skillsList.map((skill, index) => (
           <div key={index} className="skills__item">

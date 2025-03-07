@@ -1,6 +1,6 @@
 .experiences {
   padding: 3rem 10%;
-  color: $color-white;
+  color: $color-warm-white;
   max-width: 1440px;
   width: 100%;
   position: relative;
@@ -15,22 +15,10 @@
     padding: 1rem 30px;
   }
 
-  &:after {
-    content: '';
-    position: absolute;
-    background: $color-primary;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 100vw;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-  }
-
   &__title {
     font-size: 3rem;
     margin-bottom: 3rem;
+    text-align: center;
   }
 
   &__container {
@@ -102,7 +90,7 @@
   &__title {
     font-size: 2rem;
     margin-bottom: 1rem;
-		text-align: center;
+    text-align: center;
   }
 
   &__description {
@@ -151,7 +139,7 @@
     span {
       // create a scrolling underline on hover
       &::after {
-        content: '';
+        content: "";
         display: block;
         width: 0;
         height: 2px;
@@ -213,7 +201,7 @@
       background-color: $color-primary-dark-90;
       border-radius: 1rem;
       z-index: 1;
-			overflow: scroll;
+      overflow: scroll;
       position: relative;
       left: 50%;
       top: 50%;
@@ -223,7 +211,7 @@
 
       &::after {
         clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;

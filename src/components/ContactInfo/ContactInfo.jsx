@@ -7,10 +7,12 @@ import { MdArrowForwardIos } from "react-icons/md";
 export default function ContactInfo(params) {
   return (
     <section className="contact-info">
-      <h2 className="contact-info__title">Contact Info</h2>
+      <h2 className="contact-info__title">{"{Contact_Info}"}</h2>
       <div className="contact-info__content">
         <div className="contact-info__content__item">
-          <p className="contact-info__description">If you have any questions or would like to get in touch, please feel free to reach out through any of the following methods:</p>
+          <p className="contact-info__description">
+            If you have any questions or would like to get in touch, please feel free to reach out through any of the following methods:
+          </p>
           <ul className="contact-info__list">
             <li>
               <strong>Email:</strong> <a href="mailto:keithbillingsbusiness@gmail.com">keithbillingsbusiness@gmail.com</a>
