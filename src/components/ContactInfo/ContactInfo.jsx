@@ -1,8 +1,5 @@
-// Import React Router
-import { Link } from "react-router-dom";
-
 // Import React Icons
-import { MdArrowForwardIos } from "react-icons/md";
+// import { MdArrowForwardIos } from "react-icons/md";
 
 export default function ContactInfo(params) {
   return (
