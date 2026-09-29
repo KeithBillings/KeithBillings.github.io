@@ -28,27 +28,27 @@ function Skills() {
     {
       name: "React",
       icon: <FaReact />,
-      description: `${calculateYearsDiff("October 2020")} years experience`,
+      description: `${calculateYearsDiff("October 1 2020")} years experience`,
     },
     {
       name: "Javascript",
       icon: <IoLogoJavascript />,
-      description: `${calculateYearsDiff("October 2020")} years experience`,
+      description: `${calculateYearsDiff("October 1 2020")} years experience`,
     },
     {
       name: "CSS/SCSS",
       icon: <IoLogoSass />,
-      description: `${calculateYearsDiff("October 2020")} years experience`,
+      description: `${calculateYearsDiff("October 1 2020")} years experience`,
     },
     {
       name: "NodeJS",
       icon: <FaNode />,
-      description: `${calculateYearsDiff("October 2020")} years experience`,
+      description: `${calculateYearsDiff("October 1 2020")} years experience`,
     },
     {
       name: "Figma",
       icon: <FaFigma />,
-      description: `${calculateYearsDiff("March 2021")} years experience`,
+      description: `${calculateYearsDiff("March 1 2021")} years experience`,
     },
     {
       name: "NextJS",
@@ -58,12 +58,12 @@ function Skills() {
     {
       name: "Github/Git",
       icon: <FaGithub />,
-      description: `${calculateYearsDiff("October 2020")} years experience`,
+      description: `${calculateYearsDiff("October 1 2020")} years experience`,
     },
     {
       name: "Typescript",
       icon: <TbBrandTypescript />,
-      description: `${calculateYearsDiff("March 2021")} years experience`,
+      description: `${calculateYearsDiff("March 1 2021")} years experience`,
     },
     {
       name: "MongoDB",
@@ -73,12 +73,12 @@ function Skills() {
     {
       name: "HTML",
       icon: <FaHtml5 />,
-      description: `${calculateYearsDiff("October 2020")} years experience`,
+      description: `${calculateYearsDiff("October 1 2020")} years experience`,
     },
     {
       name: "Jira",
       icon: <SiJira />,
-      description: `${calculateYearsDiff("March 2021")} years experience`,
+      description: `${calculateYearsDiff("March 1 2021")} years experience`,
     },
     {
       name: "Python",

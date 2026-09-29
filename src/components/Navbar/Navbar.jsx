@@ -1,10 +1,13 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 // Components
-import NavMenuLinks from "../NavMenuLinks/NavMenuLinks";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [dynamicBackground, setDynamicBackground] = useState(false);
+
+  const { hash } = useLocation();
 
   // Add dynamic background class to navbar
   useEffect(() => {
@@ -23,11 +26,38 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (hash === "#contact-info") {
+      document.querySelector(".contact-info").scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    } else {
+      document.body.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [hash]);
+
   return (
     <div className={`navbar ${dynamicBackground ? "overlaping" : ""}`.trim()}>
       <p className="logo">{`{kb}`}</p>
       <div className="nav-menu">
-        <NavMenuLinks />
+        <ul className="nav-menu-links">
+          <li className="nav-menu-links__item">
+            <Link to="/" className="mobile-menu-links">
+              Home
+            </Link>
+          </li>
+          <li className="nav-menu-links__item">
+            <Link to="/about" className="mobile-menu-links">
+              About Me
+            </Link>
+          </li>
+          <li className="nav-menu-links__item">
+            <Link to="/#contact-info" className="mobile-menu-links">
+              Contact Me
+            </Link>
+          </li>
+        </ul>
       </div>
     </div>
   );
