@@ -13,14 +13,26 @@
   }
 
   .logo {
-    padding: 5px 10px;
+    margin: 5px 10px;
     font-size: 20px;
-    cursor: default;
+
+    &-link {
+      &:after {
+        margin-left: 10px;
+      }
+
+      &:hover {
+        &:after {
+          width: calc(100% - 20px);
+        }
+      }
+    }
   }
 
   .nav-menu {
     display: none;
     margin-left: auto;
+    margin-right: 20px;
 
     @include desktop {
       display: flex;

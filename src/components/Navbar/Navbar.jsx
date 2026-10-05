@@ -39,7 +39,9 @@ export default function Navbar() {
 
   return (
     <div className={`navbar ${dynamicBackground ? "overlaping" : ""}`.trim()}>
-      <p className="logo">{`{kb}`}</p>
+      <Link to="/" className="logo-link">
+        <p className="logo">{`{kb}`}</p>
+      </Link>
       <div className="nav-menu">
         <ul className="nav-menu-links">
           <li className="nav-menu-links__item">

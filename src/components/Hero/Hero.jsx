@@ -12,7 +12,7 @@ export default function Hero() {
   // Greeting and title animation
   useEffect(() => {
     // Greeting animation
-    const greetingText = "Hello, World! I'm,";
+    const greetingText = "Hello, World! I am:";
     // Clear greeting
     greeting.current.innerHTML = "";
 
@@ -34,12 +34,15 @@ export default function Hero() {
     title.current.innerHTML = "";
     // Loop through each letter in titleText
     for (let i = 0; i < titleText.length; i++) {
-      setTimeout(() => {
-        if (!title.current) {
-          return;
-        }
-        title.current.innerHTML += titleText[i];
-      }, 80 * i + 1440); // add 1440ms delay to start after greeting animation
+      setTimeout(
+        () => {
+          if (!title.current) {
+            return;
+          }
+          title.current.innerHTML += titleText[i];
+        },
+        80 * i + 1440,
+      ); // add 1440ms delay to start after greeting animation
     }
   }, []);
 
@@ -48,7 +51,7 @@ export default function Hero() {
       <div className="hero__container">
         <div className="hero__text">
           <h1 className="hero__greeting" ref={greeting}>
-            Hello, World! I'm,
+            Hello, World! I am:
           </h1>
           <h1 className="hero__name">Keith Billings</h1>
           <h1 className="hero__title" ref={title}>
