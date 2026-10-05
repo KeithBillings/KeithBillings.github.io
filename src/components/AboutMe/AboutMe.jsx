@@ -7,9 +7,10 @@ export default function AboutMe() {
       <div className="about-me__content">
         <div className="about-me__description">
           <p>
-            I'm a front-end specialist with a passion for building modern, user-friendly web experiences. With expertise in React and a diverse background in
-            fields like construction, firefighting, and customer service, I bring adaptability, problem-solving skills, and a strong work ethic to every
-            project. When I'm not coding, you'll find me staying active, exploring new tech, or geeking out over cars and Formula 1.
+            Web developer with over 5 years of experience. Attended University of Oregon and University of London. Proficient in React.js, HTML, CSS and SCSS,
+            Javascript, Typescript, Node.js, Figma, Next.js, and other web technologies. Gained leadership experience while at Brandlive as the head of the
+            custom development team. Worked with many Fortune 100 brands, communicated often directly with clients, and received accolades for building a
+            Javascript library similar to jQuery.
           </p>
         </div>
         <div className="about-me__image"></div>
