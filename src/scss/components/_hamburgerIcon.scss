@@ -1,11 +1,13 @@
+@use "../index" as *;
+
 .hamburger-icon {
   margin-left: auto;
   padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 3px;
-	z-index: 10;
-	pointer-events: auto;
+  z-index: 10;
+  pointer-events: auto;
 
   div {
     transition: all 0.3s;

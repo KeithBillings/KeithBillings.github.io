@@ -1,16 +1,15 @@
-// Imports
-@import "./utilities/variables";
-@import "./colors/colors";
-@import "./typography/typography";
-@import "./mixins/mixins";
-@import "./utilities/utilities";
+// Variables
+@use "index";
 
-// Base
-@import "./base/base";
-@import "./base/module-backgrounds";
+// Base Styles
+@use "base/base";
+@use "base/module-backgrounds";
 
-// Pages
-@import "./pages/pages";
+// Page Styles
+@use "pages/pages";
 
-// Components
-@import "./components/components";
+// Component Styles
+@use "components/components";
+
+// Utility Styles
+@use "utilities/utilities";

@@ -1,3 +1,5 @@
+@use "../index" as *;
+
 .about-and-skills,
 .contact-info {
   &::after {

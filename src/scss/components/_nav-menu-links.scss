@@ -1,3 +1,5 @@
+@use "../index" as *;
+
 @mixin mobileAndTabletNavStyles {
   padding: 3rem 3rem 6rem 3rem;
   box-shadow: 5px 10px 10px 0px $color-warm-black-20;
@@ -8,9 +10,9 @@
   top: -$navbar-height;
   position: relative;
   @include wipeTopRight(0.3s);
-	width: $mobile-menu-width;
-	margin-left: auto;
-	pointer-events: auto;
+  width: $mobile-menu-width;
+  margin-left: auto;
+  pointer-events: auto;
 
   .mobile-menu-item {
     text-align: center;

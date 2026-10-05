@@ -1,0 +1,7 @@
+// collect all variables, mixins, and functions into one file for easy access.
+// each directory has a collection file of their own, and this collects them all into one file for easy access in the main.scss file.
+
+@forward "colors/colors";
+@forward "typography/typography";
+@forward "mixins/mixins";
+@forward "utilities/variables";
