@@ -1,12 +1,13 @@
 @use "../index" as *;
 
-.experiences {
+.experience,
+.education {
   padding: 3rem 10%;
   color: $color-warm-white;
   max-width: 1440px;
   width: 100%;
   position: relative;
-  z-index: 1;
+  // z-index: 1;
 
   // Add responsive styles for smaller devices
   @include tablet() {
@@ -37,18 +38,16 @@
       gap: 2rem;
     }
   }
-}
 
-.experience {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: $color-primary;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  position: relative;
-  height: 10rem;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  // background: $color-primary;
+  // border-radius: 1rem;
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  // position: relative;
+  // height: 10rem;
 
   &__item {
     display: flex;
@@ -65,104 +64,104 @@
         @include wipeTopRight(0.3s);
       }
     }
-  }
 
-  &__image-wrapper {
-    height: 12rem;
-    width: 100%;
-    padding: 2rem 5rem;
-  }
-
-  &__image {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    filter: grayscale(1);
-  }
-
-  &__content {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  &__description {
-    font-size: 1.5rem;
-    text-align: justify;
-    padding: 2.5rem;
-  }
-
-  &__link {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    color: $color-white;
-    text-decoration: none;
-    border-bottom: 1px solid $color-white;
-    padding-bottom: 0.5rem;
-    transition: all 0.3s;
-
-    &:hover {
-      color: $color-primary;
-      border-bottom: 1px solid $color-primary;
-    }
-  }
-
-  &__read-more {
-    width: 100%;
-    background-color: $color-primary-dark-60;
-    padding: 1rem;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
-    margin-top: auto;
-
-    span {
-      pointer-events: none;
+    &__image-wrapper {
+      height: 12rem;
+      width: 100%;
+      padding: 2rem 5rem;
     }
 
-    // hide the default scrolling bar on hover
-    &::after {
-      visibility: hidden;
+    &__image {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      filter: grayscale(1);
     }
 
-    span {
-      // create a scrolling underline on hover
-      &::after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 2px;
-        background-color: $color-warm-white;
-        transition: width 0.3s;
+    &__content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    &__description {
+      font-size: 1.5rem;
+      text-align: justify;
+      padding: 2.5rem;
+    }
+
+    &__link {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: $color-white;
+      text-decoration: none;
+      border-bottom: 1px solid $color-white;
+      padding-bottom: 0.5rem;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $color-primary;
+        border-bottom: 1px solid $color-primary;
       }
     }
 
-    &:hover {
-      background-color: $color-primary-dark;
+    &__read-more {
+      width: 100%;
+      background-color: $color-primary-dark-60;
+      padding: 1rem;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      margin-top: auto;
 
       span {
-        // animate a scrolling underline on hover
+        pointer-events: none;
+      }
+
+      // hide the default scrolling bar on hover
+      &::after {
+        visibility: hidden;
+      }
+
+      span {
+        // create a scrolling underline on hover
         &::after {
-          width: 100%;
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          background-color: $color-warm-white;
+          transition: width 0.3s;
         }
       }
-    }
 
-    &__icon {
-      margin-right: 0.5rem;
+      &:hover {
+        background-color: $color-primary-dark;
+
+        span {
+          // animate a scrolling underline on hover
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+
+      &__icon {
+        margin-right: 0.5rem;
+      }
     }
   }
 
@@ -173,6 +172,7 @@
     left: 0;
     top: 0;
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    z-index: 1000;
 
     &.active {
       @include wipeTopLeftFull(0.3s);

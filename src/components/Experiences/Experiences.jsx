@@ -16,6 +16,7 @@ export default function Experiences() {
   const experienceList = [
     {
       title: "Lead Custom Web Developer",
+      subtitle: "March 2021 - September 2026",
       description:
         "Lead custom Web Developer at Brandlive responsible for creating new features, developing custom components, fixing UI bugs, accessibility compliance, and building custom virtual events.",
       fullDescription: (
@@ -50,30 +51,6 @@ export default function Experiences() {
       ),
       headerImage: brandlive,
     },
-    {
-      title: "University of Oregon Coding Bootcamp",
-      description:
-        "Attended University of Oregon and learned the MERN stack, other web technologies. Gained a certification of completion for full stack web development.",
-      fullDescription: (
-        <p>
-          During my time at the University of Oregon Coding Bootcamp, I received comprehensive training in Full Stack Web Development, specializing in the MERN
-          stack (MongoDB, Express, React, and Node.js). In addition to core technologies, I gained experience with supplemental tools such as HTML, SCSS,
-          JavaScript, and TypeScript. Through a series of hands-on projects, I developed strong problem-solving skills, honed my ability to work effectively
-          with a team, and learned how to plan sprints, use Jira and Figma, and maintain clear communication. Upon completion of the program, I was awarded a
-          certificate, which recognized my proficiency in Full Stack Web Development and prepared me for a successful career in the industry.
-        </p>
-      ),
-      headerImage: oregonLogo,
-      image: bootcampCert,
-      alt: "University of Oregon Coding Bootcamp Certificate of Completion",
-    },
-    {
-      title: "University of London - Goldsmiths",
-      description: "Attended University of London - Goldsmiths learning the fundamentals of computer science and pursuing a BSc in Computer Science.",
-      fullDescription:
-        "Attended University of London - Goldsmiths learning the fundamentals of computer science and pursuing a BSc in Computer Science. Learned about algorithms, data structures, and the mathematics behind computer science. Learned about the history of computer science and the impact it has has on the world.",
-      headerImage: goldsmithsLogo,
-    },
   ];
 
   const handleCloseOverlay = useCallback(() => {
@@ -98,19 +75,20 @@ export default function Experiences() {
   }, [handleCloseOverlay, overlayActive]);
 
   return (
-    <section className="experiences">
-      <h2 className="experiences__title">{"{Experience_and_Education}"}</h2>
-      <div className="experiences__container">
+    <section className="experience">
+      <h2 className="experience__title">{"{Experience}"}</h2>
+      <div className="experience__container">
         {/* Experience Cards */}
         {experienceList.map((experience, index) => (
           <div key={index} className="experience__item">
-            <div className="experience__image-wrapper">
-              <img src={experience.headerImage} alt={experience.title} className="experience__image" loading="lazy" />
+            <div className="experience__item__image-wrapper">
+              <img src={experience.headerImage} alt={experience.title} className="experience__item__image" loading="lazy" />
             </div>
-            <div className="experience__content">
-              <h3 className="experience__title">{experience.title}</h3>
-              <p className="experience__description">{experience.description}</p>
-              <button data-index={index} className="experience__read-more" target="_blank" rel="noopener noreferrer" onClick={handleExperienceCardClick}>
+            <div className="experience__item__content">
+              <h3 className="experience__item__title">{experience.title}</h3>
+              <p className="experience__item__subtitle">{experience.subtitle}</p>
+              <p className="experience__item__description">{experience.description}</p>
+              <button data-index={index} className="experience__item__read-more" target="_blank" rel="noopener noreferrer" onClick={handleExperienceCardClick}>
                 <span>Read More</span>
               </button>
             </div>

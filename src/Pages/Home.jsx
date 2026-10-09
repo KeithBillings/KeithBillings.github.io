@@ -5,6 +5,7 @@ import AboutMe from "../components/AboutMe/AboutMe";
 import Hero from "../components/Hero/Hero";
 import Skills from "../components/Skills/Skills";
 import Experiences from "../components/Experiences/Experiences";
+import Education from "../components/Education/Education";
 import Companies from "../components/Companies/Companies";
 import ContactInfo from "../components/ContactInfo/ContactInfo";
 
@@ -30,6 +31,7 @@ export default function Home(props) {
         <Skills />
       </div>
       <Experiences />
+      <Education />
       <Companies />
       <ContactInfo />
     </div>
