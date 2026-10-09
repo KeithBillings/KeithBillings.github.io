@@ -2,9 +2,6 @@ import React, { useState, useEffect, useCallback } from "react";
 
 // Images
 import brandlive from "../../assets/images/brandlive_logo.png";
-import oregonLogo from "../../assets/images/oregon_logo.png";
-import goldsmithsLogo from "../../assets/images/goldsmiths_logo.png";
-import bootcampCert from "../../assets/images/University of Oregon Coding Bootcamp Certificate of Completion.jpg";
 
 // Icons
 import { IoClose } from "react-icons/io5";

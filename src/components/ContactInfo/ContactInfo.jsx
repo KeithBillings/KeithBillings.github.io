@@ -12,7 +12,10 @@ export default function ContactInfo(params) {
           </p>
           <ul className="contact-info__list">
             <li>
-              <strong>Email:</strong> <a href="mailto:keithbillingsbusiness@gmail.com">keithbillingsbusiness@gmail.com</a>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:keithbillingsbusiness@gmail.com" target="_blank" rel="noopener noreferrer">
+                keithbillingsbusiness@gmail.com
+              </a>
             </li>
             <li>
               <strong>LinkedIn:</strong>
