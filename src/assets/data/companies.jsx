@@ -8,7 +8,7 @@ import columbiaLogo from "../svgs/columbia-logo.svg";
 import dowJonesLogo from "../svgs/dow-jones-logo.svg";
 import googleLogo from "../svgs/google-logo.svg";
 import hyundaiLogo from "../svgs/hyundai-logo.svg";
-import nikeLogo from "../svgs/nike-logo.svg";
+import nikeLogo from "../svgs/Nike_logo_1978.svg";
 import nintendoLogo from "../svgs/nintendo-logo.svg";
 import northFaceLogo from "../svgs/north-face-logo.svg";
 import nprLogo from "../svgs/npr-logo.svg";

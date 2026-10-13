@@ -30,9 +30,9 @@ export default function Home(props) {
         <AboutMe />
         <Skills />
       </div>
+      <Companies />
       <Experiences />
       <Education />
-      <Companies />
       <ContactInfo />
     </div>
   );
