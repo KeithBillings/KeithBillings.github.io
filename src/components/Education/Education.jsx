@@ -43,8 +43,8 @@ export default function Education() {
     setOverlayActive(!overlayActive);
   }, [overlayActive]);
 
-  const handleEducationCardClick = (e) => {
-    setActiveEducation(e.target.dataset.index);
+  const handleEducationCardClick = (index) => {
+    setActiveEducation(index);
 
     // open overlay if not already open
     if (!overlayActive) {
@@ -53,11 +53,14 @@ export default function Education() {
   };
 
   useEffect(() => {
-    window.addEventListener("keydown", (e) => {
+    const handleKeyDown = (e) => {
       if (e.key === "Escape" && overlayActive) {
         handleCloseOverlay();
       }
-    });
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [handleCloseOverlay, overlayActive]);
 
   return (
@@ -74,7 +77,7 @@ export default function Education() {
               <h3 className="education__item__title">{education.title}</h3>
               <p className="education__item__subtitle">{education.subtitle}</p>
               <p className="education__item__description">{education.description}</p>
-              <button data-index={index} className="education__item__read-more" target="_blank" rel="noopener noreferrer" onClick={handleEducationCardClick}>
+              <button className="education__item__read-more" target="_blank" rel="noopener noreferrer" onClick={() => handleEducationCardClick(index)}>
                 <span>Read More</span>
               </button>
             </div>

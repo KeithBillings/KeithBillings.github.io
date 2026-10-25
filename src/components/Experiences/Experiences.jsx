@@ -54,8 +54,8 @@ export default function Experiences() {
     setOverlayActive(!overlayActive);
   }, [overlayActive]);
 
-  const handleExperienceCardClick = (e) => {
-    setActiveExperience(e.target.dataset.index);
+  const handleExperienceCardClick = (index) => {
+    setActiveExperience(index);
 
     // open overlay if not already open
     if (!overlayActive) {
@@ -64,11 +64,14 @@ export default function Experiences() {
   };
 
   useEffect(() => {
-    window.addEventListener("keydown", (e) => {
+    const handleKeyDown = (e) => {
       if (e.key === "Escape" && overlayActive) {
         handleCloseOverlay();
       }
-    });
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [handleCloseOverlay, overlayActive]);
 
   return (
@@ -85,7 +88,7 @@ export default function Experiences() {
               <h3 className="experience__item__title">{experience.title}</h3>
               <p className="experience__item__subtitle">{experience.subtitle}</p>
               <p className="experience__item__description">{experience.description}</p>
-              <button data-index={index} className="experience__item__read-more" target="_blank" rel="noopener noreferrer" onClick={handleExperienceCardClick}>
+              <button className="experience__item__read-more" target="_blank" rel="noopener noreferrer" onClick={() => handleExperienceCardClick(index)}>
                 <span>Read More</span>
               </button>
             </div>
