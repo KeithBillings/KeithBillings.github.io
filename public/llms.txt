@@ -1,0 +1,32 @@
+# Keith Billings
+
+> Keith Billings is a web developer based in Oregon with over 5 years of experience, specializing in React and front-end development. He led the custom web development team at Brandlive, building custom virtual events, components, and integrations for Fortune 100 brands.
+
+This site is a single-page React app, so its pages render client-side. This file summarizes the same content in plain text.
+
+## About
+
+- Front-end specialist who builds modern websites, utilitarian web tools, and API and data integrations
+- Attended the University of Oregon Coding Bootcamp (full stack web development certificate, MERN stack) and the University of London - Goldsmiths (pursuing a BSc in Computer Science)
+- Skills: React, JavaScript, TypeScript, HTML, CSS/SCSS, Node.js, Next.js, Figma, Git/GitHub, Jira, MongoDB, Python
+- Background before tech includes construction and building maintenance, customer service, bartending, and firefighting
+
+## Experience
+
+- Lead Custom Web Developer at Brandlive (March 2021 - September 2026): led the custom web development team; built new features, custom components, and custom virtual events; handled accessibility compliance; set up analytics (GA4, GTM, LinkedIn, Facebook, Adobe) and CRM integrations (Salesforce, Marketo, Adobe) with Tray.ai; built a custom DOM manipulation JavaScript library; maintained the company website in Framer with a focus on accessibility and SEO
+- Brands worked with include AARP, Adidas, Asana, Block, Clarivate, ClickUp, Columbia, Dow Jones, Google, Hyundai, Nike, Nintendo, The North Face, NPR, Pink, Pluralsight, Public, Sony, Vans, Wired, and YouTube
+
+## Pages
+
+- [Home](https://www.keithbillings.com/): introduction, skills, companies, experience, education, and contact info
+- [About Me](https://www.keithbillings.com/about): longer personal bio
+
+## Contact
+
+- [Email](mailto:keithbillingsbusiness@gmail.com): keithbillingsbusiness@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/keithbillings/)
+- [GitHub](https://github.com/keithbillings)
+
+## Optional
+
+- [Privacy Policy](https://www.keithbillings.com/privacy-policy)
