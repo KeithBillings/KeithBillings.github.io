@@ -172,9 +172,9 @@
     </div>
   </body>
   <script>
-    // if pathname is contact, set contact in local storage
+    // if pathname is a known route, set it in local storage
     const path = window.location.pathname;
-    if (path === "/contact" || path === "/about" || path === "/privacy-policy") {
+    if (path === "/about" || path === "/privacy-policy") {
       const localData = JSON.stringify({ route: path });
       localStorage.setItem("kb-localData", localData);
       window.location.href = "/";

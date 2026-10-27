@@ -10,7 +10,6 @@ sitemap.pipe(writeStream);
 // List of URLs
 sitemap.write({ url: '/', changefreq: 'monthly', priority: 1 });
 sitemap.write({ url: '/about', changefreq: 'yearly', priority: 0.8 });
-sitemap.write({ url: '/contact', changefreq: 'yearly', priority: 0.7 });
 sitemap.write({ url: '/privacy-policy', changefreq: 'yearly', priority: 0.3 });
 
 // Listen for the 'finish' event on writeStream

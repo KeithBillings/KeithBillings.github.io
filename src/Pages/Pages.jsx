@@ -3,7 +3,6 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 
 // pages
 import Home from "./Home";
-import ContactMe from "./ContactMe";
 import AboutMePage from "./AboutMePage";
 import PrivacyPolicy from "./PrivacyPolicy";
 
@@ -30,7 +29,6 @@ export default function Pages() {
   return (
     <Routes>
       <Route exact path="/about" element={<AboutMePage />} />
-      <Route exact path="/contact" element={<ContactMe />} />
       <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route exact path="/" element={<Home />} />
     </Routes>

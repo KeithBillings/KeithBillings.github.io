@@ -1,8 +1,8 @@
 import { useRef, useEffect } from "react";
 
 // Images
-import PortlandMap from "../../assets/images/portland.png";
-import keith from "../../assets/images/keith2.png";
+import portlandWebp from "../../assets/images/portland.webp";
+import keithWebp from "../../assets/images/keith2.webp";
 
 export default function Hero() {
   // Refs
@@ -59,11 +59,15 @@ export default function Hero() {
           </h1>
         </div>
         <div className="hero__image">
-          <img src={keith} alt="Keith Billings" />
+          <picture>
+            <img src={keithWebp} alt="Keith Billings" />
+          </picture>
         </div>
       </div>
       <div className="hero__background-image">
-        <img src={PortlandMap} alt="Portland Map" />
+        <picture>
+          <img src={portlandWebp} alt="Portland Map" />
+        </picture>
       </div>
     </section>
   );

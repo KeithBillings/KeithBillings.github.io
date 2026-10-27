@@ -131,6 +131,11 @@
       right: 0;
     }
 
+    // let the img size against .hero__image as if <picture> weren't there
+    picture {
+      display: contents;
+    }
+
     img {
       height: 100%;
       filter: opacity(0.95) drop-shadow(5px 5px 10px $color-warm-black-50);
@@ -145,6 +150,11 @@
     top: 0;
     left: 0;
     filter: grayscale(100%);
+
+    // let the img size against .hero__background-image as if <picture> weren't there
+    picture {
+      display: contents;
+    }
 
     img {
       width: 100%;

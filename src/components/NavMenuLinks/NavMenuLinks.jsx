@@ -15,7 +15,7 @@ export default function NavMenuLinks() {
         </Link>
       </li>
       <li className="nav-menu-links__item">
-        <Link to="/contact" className="mobile-menu-links">
+        <Link to="/#contact-info" className="mobile-menu-links">
           Contact Me
         </Link>
       </li>
