@@ -1,0 +1,35 @@
+@use "../index" as *;
+
+.not-found {
+  padding: 10rem 10% 5rem;
+  min-height: 70vh;
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: auto;
+  text-align: center;
+
+  @include tablet() {
+    padding: 8rem 5% 3rem;
+  }
+
+  @include mobile() {
+    padding: 8rem 5% 2rem;
+  }
+
+  &__title {
+    font-size: 6rem;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+}

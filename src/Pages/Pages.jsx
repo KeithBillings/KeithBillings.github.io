@@ -5,6 +5,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import Home from "./Home";
 import AboutMePage from "./AboutMePage";
 import PrivacyPolicy from "./PrivacyPolicy";
+import NotFound from "./NotFound";
 
 export default function Pages() {
   // fetch local storage
@@ -31,6 +32,7 @@ export default function Pages() {
       <Route exact path="/about" element={<AboutMePage />} />
       <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route exact path="/" element={<Home />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
