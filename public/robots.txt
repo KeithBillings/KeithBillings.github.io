@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://keithbillings.com/sitemap.xml
+Sitemap: https://www.keithbillings.com/sitemap.xml

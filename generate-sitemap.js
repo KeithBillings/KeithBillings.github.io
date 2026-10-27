@@ -2,7 +2,7 @@ const { SitemapStream } = require('sitemap');
 const { createWriteStream } = require('fs');
 const { resolve } = require('path');
 
-let sitemap = new SitemapStream({ hostname: 'https://keithbillings.com/' });
+let sitemap = new SitemapStream({ hostname: 'https://www.keithbillings.com/' });
 
 let writeStream = createWriteStream(resolve(__dirname, './public/sitemap.xml'));
 sitemap.pipe(writeStream);

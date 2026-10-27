@@ -6,6 +6,8 @@ import bmw from "../assets/images/bmw.png";
 export default function AboutMePage() {
   return (
     <div className="about-me-page">
+      {/* React 19 hoists this into <head> */}
+      <link rel="canonical" href="https://www.keithbillings.com/about" />
       <h1 className="about-me-page__title">{"{About_Me}"}</h1>
 
       <div className="about-me-page__content">

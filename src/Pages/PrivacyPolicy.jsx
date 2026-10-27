@@ -2,6 +2,8 @@
 export default function PrivacyPolicy() {
   return (
     <div className="privacy-policy">
+      {/* React 19 hoists this into <head> */}
+      <link rel="canonical" href="https://www.keithbillings.com/privacy-policy" />
       <h1 className="privacy-policy__title">Privacy Policy</h1>
 
       <p>Your privacy is important to me. This privacy policy outlines the types of personal information I receive and collect when you visit my website and how I safeguard your information.</p>

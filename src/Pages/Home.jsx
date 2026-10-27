@@ -25,6 +25,8 @@ export default function Home(props) {
 
   return (
     <div className="home">
+      {/* React 19 hoists this into <head> */}
+      <link rel="canonical" href="https://www.keithbillings.com/" />
       <Hero />
       <div className="about-and-skills">
         <AboutMe />
