@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   const [dynamicBackground, setDynamicBackground] = useState(false);
 
-  const { hash } = useLocation();
+  // key changes on every navigation, even to the current URL, so the scroll effect runs on every nav click
+  const { hash, key } = useLocation();
 
   // Add dynamic background class to navbar
   useEffect(() => {
@@ -36,7 +37,7 @@ export default function Navbar() {
     } else {
       document.body.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [hash]);
+  }, [hash, key]);
 
   return (
     <div className={`navbar ${dynamicBackground ? "overlaping" : ""}`.trim()}>
