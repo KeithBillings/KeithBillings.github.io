@@ -1,8 +1,9 @@
-export default function HamburgerMenu({ callback, className, activeToggle }) {
+export default function HamburgerMenu({ callback, className, activeToggle, ref }) {
 
   return (
     <button
       type="button"
+      ref={ref}
       onClick={callback}
       className={`hamburger-icon ${className ? className : ""} ${activeToggle ? "active" : ""}`.trim()}
       aria-label="Menu"
