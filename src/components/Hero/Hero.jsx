@@ -50,13 +50,20 @@ export default function Hero() {
     <section className="hero">
       <div className="hero__container">
         <div className="hero__text">
-          <h1 className="hero__greeting" ref={greeting}>
-            Hello, World! I am:
-          </h1>
+          {/* Screen readers get the full text; the typing animation is hidden from them so it isn't read mid-type */}
+          <p className="hero__greeting">
+            <span className="visually-hidden">Hello, World! I am:</span>
+            <span ref={greeting} aria-hidden="true">
+              Hello, World! I am:
+            </span>
+          </p>
           <h1 className="hero__name">Keith Billings</h1>
-          <h1 className="hero__title" ref={title}>
-            Web developer
-          </h1>
+          <p className="hero__title">
+            <span className="visually-hidden">Web developer</span>
+            <span ref={title} aria-hidden="true">
+              Web developer
+            </span>
+          </p>
         </div>
         <div className="hero__image">
           <picture>

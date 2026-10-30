@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useId, useRef } from "react";
 
 // Images
 import oregonLogo from "../../assets/images/oregon_logo.png";
@@ -11,6 +11,12 @@ import { IoClose } from "react-icons/io5";
 export default function Education() {
   const [activeEducation, setActiveEducation] = useState(0);
   const [overlayActive, setOverlayActive] = useState(false);
+
+  // Dialog accessibility
+  const titleId = useId();
+  const dialogRef = useRef(null);
+  const closeButtonRef = useRef(null);
+  const triggerRef = useRef(null);
 
   const educationList = [
     {
@@ -43,8 +49,9 @@ export default function Education() {
     setOverlayActive(!overlayActive);
   }, [overlayActive]);
 
-  const handleEducationCardClick = (index) => {
+  const handleEducationCardClick = (index, trigger) => {
     setActiveEducation(index);
+    triggerRef.current = trigger;
 
     // open overlay if not already open
     if (!overlayActive) {
@@ -54,14 +61,43 @@ export default function Education() {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === "Escape" && overlayActive) {
+      if (!overlayActive) return;
+
+      if (e.key === "Escape") {
         handleCloseOverlay();
+      }
+
+      // keep keyboard focus inside the open dialog
+      if (e.key === "Tab") {
+        const focusable = dialogRef.current.querySelectorAll('button, [tabindex="0"]');
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (!dialogRef.current.contains(document.activeElement)) {
+          e.preventDefault();
+          first.focus();
+        } else if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [handleCloseOverlay, overlayActive]);
+
+  // move focus into the dialog when it opens, and back to its Read More button when it closes
+  useEffect(() => {
+    if (overlayActive) {
+      closeButtonRef.current.focus();
+    } else {
+      triggerRef.current?.focus();
+    }
+  }, [overlayActive]);
 
   return (
     <section className="education">
@@ -77,7 +113,7 @@ export default function Education() {
               <h3 className="education__item__title">{education.title}</h3>
               <p className="education__item__subtitle">{education.subtitle}</p>
               <p className="education__item__description">{education.description}</p>
-              <button className="education__item__read-more" target="_blank" rel="noopener noreferrer" onClick={() => handleEducationCardClick(index)}>
+              <button className="education__item__read-more" onClick={(e) => handleEducationCardClick(index, e.currentTarget)}>
                 <span>Read More</span>
               </button>
             </div>
@@ -85,10 +121,11 @@ export default function Education() {
         ))}
 
         {/* Overlay */}
-        <div className={`education__overlay ${overlayActive ? "active" : ""}`.trim()}>
-          <div className="education__overlay__content">
-            <button className="education__overlay__exit" onClick={handleCloseOverlay}>
-              <IoClose />
+        {/* inert hides the closed overlay from keyboard and screen readers, since clip-path only hides it visually */}
+        <div className={`education__overlay ${overlayActive ? "active" : ""}`.trim()} inert={!overlayActive}>
+          <div className="education__overlay__content" role="dialog" aria-modal="true" aria-labelledby={titleId} ref={dialogRef}>
+            <button className="education__overlay__exit" onClick={handleCloseOverlay} aria-label="Close" ref={closeButtonRef}>
+              <IoClose aria-hidden="true" />
             </button>
             <div className="education__overlay__header">
               <img
@@ -97,9 +134,12 @@ export default function Education() {
                 className="education__overlay__header__image"
                 loading="lazy"
               />
-              <h3 className="education__overlay__title">{educationList[activeEducation].title}</h3>
+              <h3 className="education__overlay__title" id={titleId}>
+                {educationList[activeEducation].title}
+              </h3>
             </div>
-            <div className="education__overlay__description">
+            {/* focusable so keyboard users can scroll long descriptions */}
+            <div className="education__overlay__description" tabIndex={0}>
               <div className="education__overlay__description__text">{educationList[activeEducation].fullDescription}</div>
               {educationList[activeEducation].image && (
                 <div className="education__overlay__image">
