@@ -13,6 +13,14 @@
   position: relative;
   z-index: 1;
 
+  // tablets and phones: stack About above Skills instead of squeezing them side by side
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4rem;
+    padding: 3rem 5%;
+    text-align: left;
+  }
+
   .about-me {
     &__title {
       font-size: 3rem;
