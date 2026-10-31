@@ -3,7 +3,14 @@ import { companies } from "../../assets/data/companies";
 export default function Companies() {
   return (
     <section className="companies">
-      <h2 className="companies__title">{"{Companies_Worked_With}"}</h2>
+      {/* <wbr> lets the title wrap after an underscore on narrow screens instead of overflowing */}
+      <h2 className="companies__title">
+        {"{Companies_"}
+        <wbr />
+        {"Worked_"}
+        <wbr />
+        {"With}"}
+      </h2>
       <div className="companies__container">
         {companies.map((company, index) => (
           <div key={index} className="companies__item">
